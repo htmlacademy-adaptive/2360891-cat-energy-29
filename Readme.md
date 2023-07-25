@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Алексей Гурьев](https://up.htmlacademy.ru/adaptive/29/user/2360891).
-* Наставник: `Неизвестно`.
+* Наставник: [Виктор Рыбаков](https://htmlacademy.ru/profile/viktor-rybakov).
 
 ---
 

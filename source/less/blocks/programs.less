@@ -1,0 +1,33 @@
+.programs {
+  background-color: #ffffff;
+}
+
+
+.programs__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0 auto;
+  padding: 0;
+  width: calc(100% - 20px);
+  list-style-type: none;
+}
+
+.programs__list--tablet {
+  width: calc(100% - 30px);
+}
+
+.programs__list--desktop {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: row;
+    gap: 80px;
+    width: calc(100% - 110px);
+  }
+}
+
+.programs__item {
+  text-align: left;
+}
+

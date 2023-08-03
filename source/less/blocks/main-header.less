@@ -1,0 +1,25 @@
+.main-header {
+  width: calc(100% - 20px);
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+.main-header--tablet {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 30px);
+  }
+}
+
+.main-header--desktop {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 110px);
+  }
+}
+
+.main-header__wrapper {
+  display: flex;
+}

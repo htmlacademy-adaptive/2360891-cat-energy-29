@@ -1,0 +1,43 @@
+.field-input {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.field-input__title {
+  color: #444444;
+  font-family: @font-secondary;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.field-input__value {
+  flex-grow: 1;
+  padding: 14px 15px;
+  color: #444444;
+  font-family: @font-secondary;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .field-input__title {
+    font-size: 20px;
+    line-height: normal;
+  }
+
+  .field-input__value {
+    font-size: 20px;
+    line-height: normal;
+  }
+}
+
+// @media (min-width: @desktop-width) {
+
+// }

@@ -17,16 +17,16 @@
   width: calc(100% - 30px);
 }
 
-.programs__list--desktop {
-  @media (min-width: @desktop-width) {
+.programs__item {
+  text-align: left;
+}
+
+@media (min-width: @desktop-width) {
+  .programs__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     flex-direction: row;
     gap: 80px;
-    width: calc(100% - 110px);
+    width: @width-desktop;
   }
-}
-
-.programs__item {
-  text-align: left;
 }

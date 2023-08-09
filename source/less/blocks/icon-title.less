@@ -1,0 +1,91 @@
+.icon-title {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #68b738;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+.icon-ttile--cat::before {
+  position: absolute;
+  content: "";
+  top: -3px;
+  left: 8px;
+  width: 35px;
+  height: 50px;
+  background-image: url("../../img/cat-slim.svg");
+  background-repeat: no-repeat;
+}
+
+.icon-ttile--puma::before {
+  position: absolute;
+  content: "";
+  top: 10px;
+  left: -8px;
+  width: 67px;
+  height: 28px;
+  background-image: url("../../img/cat-pro.svg");
+  background-repeat: no-repeat;
+}
+
+
+@media (min-width: @tablet-width) {
+  .icon-title {
+    width: 200px;
+    height: 200px;
+  }
+
+  .icon-ttile--cat::before {
+    position: absolute;
+    content: "";
+    top: -10px;
+    left: 30px;
+    width: 140px;
+    height: 194px;
+    background-image: url("../../img/cat-slim.svg");
+    background-size: 100%;
+  }
+
+  .icon-ttile--puma::before {
+    position: absolute;
+    content: "";
+    top: 40px;
+    left: -30px;
+    width: 268px;
+    height: 112px;
+    background-image: url("../../img/cat-pro.svg");
+    background-size: 100%;
+    background-position: center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .icon-title {
+    width: 100px;
+    height: 100px;
+  }
+
+  .icon-ttile--cat::before {
+    position: absolute;
+    content: "";
+    top: -10px;
+    left: 10px;
+    width: 70px;
+    height: 98px;
+    background-image: url("../../img/cat-slim.svg");
+  }
+
+  .icon-ttile--puma::before {
+    position: absolute;
+    content: "";
+    top: 25px;
+    left: -15px;
+    width: 134px;
+    height: 56px;
+    background-image: url("../../img/cat-pro.svg");
+    background-position: center;
+  }
+}

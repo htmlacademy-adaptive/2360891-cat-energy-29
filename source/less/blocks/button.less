@@ -1,9 +1,9 @@
 .button {
-  padding: 7px 44px;
+  // padding: 7px 44px;
   background-color: @color-btn-primary;
   color: #ffffff;
   text-align: center;
-  font-family: "Oswald", sans-serif;
+  font-family: @font-secondary;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -17,3 +17,17 @@
   background-color: @color-btn-secondary;
   color: @color-text-secondary;
 }
+
+.button--hero {
+  padding: 7px 44px;
+}
+
+@media (min-width: @tablet-width) {
+  .button--hero {
+    padding: 14px 26px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+

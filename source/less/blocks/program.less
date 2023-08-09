@@ -2,22 +2,48 @@
   background-color: #f2f2f2;
 }
 
+.program__wrapper {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  padding-top: 21px;
+  padding-bottom: 18px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
 .program__title {
   margin: 0;
   padding: 0;
   color: #000000;
+  font-family: @font-secondary;
   font-size: 24px;
   font-weight: 400;
   line-height: 37px;
   text-transform: uppercase;
 }
 
+.program__title-image {
+  margin-right: 20px;
+}
+
 .program__description {
+  grid-column: 1/-1;
   margin: 0;
+  margin-bottom: 15px;
   padding: 0;
+  padding-top: 25px;
+  padding-bottom: 23px;
+  padding-right: 13px;
+  border-bottom: 1px solid #d9d9d9;
 }
 
 .program__button-all-catalog {
+  position: relative;
+  grid-column: 1/-1;
+  justify-self: start;
+  padding-right: 45px;
   color: #000000;
   text-align: center;
   font-family: @font-secondary;
@@ -25,4 +51,84 @@
   font-weight: 400;
   line-height: 16px;
   text-transform: uppercase;
+  background-image: url("../../img/icon_arrow.svg");
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: right;
+  cursor: pointer;
+}
+
+@media (min-width: @tablet-width) {
+  .program__wrapper {
+    grid-template-columns: 55% 45%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "title image"
+      "description image"
+      "link image";
+    justify-items: left;
+    align-items: center;
+    column-gap: 7%;
+    padding-top: 77px;
+    padding-left: 53px;
+    padding-right: 63px;
+    padding-bottom: 57px;
+  }
+
+  .program__title {
+    padding: 0;
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 24px;
+  }
+
+  .program__description {
+    grid-column: 1/1;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 52px;
+    padding: 0;
+    border: none;
+  }
+
+  .program__title-image {
+    grid-area: image;
+    justify-self: center;
+    margin: 0;
+  }
+
+  .program__button-all-catalog {
+    font-size: 20px;
+    line-height: normal;
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .program__wrapper {
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-areas:
+      "image title"
+      "description description"
+      "link link";
+    column-gap: 62px;
+  }
+
+  .program__title {
+    grid-area: title;
+    grid-column: 2/3;
+    margin: 0;
+  }
+
+  .program__title-image {
+    grid-column: 1/2;
+    justify-self: start;
+  }
+
+  .program__description {
+    width: 100%;
+    grid-area: description;
+    padding-top: 39px;
+    margin-bottom: 27px;
+  }
 }

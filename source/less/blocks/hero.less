@@ -1,10 +1,29 @@
 .hero {
-  background-repeat: no-repeat;
-  background-color: rgba(104, 183, 56, 0.85);
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85) 61%, rgb(255, 255, 255) 61%, rgb(255, 255, 255)),
+    url("../../img/background-cat.jpeg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto, 100%;
+  background-position: top;
+}
+
+.hero__wrapper {
+  width: @width-mobile;
+  margin: 0 auto;
+  padding-top: 27px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.hero__title {
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+  color: #ffffff;
 }
 
 .hero__description {
   margin: 0;
+  margin-bottom: 29px;
   padding: 0;
   color: #ffffff;
   font-family: @font-secondary;
@@ -17,4 +36,91 @@
 
 .hero__main-image {
   display: block;
+  min-width: 280px;
+  margin: 0 auto;
+  margin-bottom: 3px;
+}
+
+.hero__button {
+  display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .hero {
+    background-image: none;
+  }
+
+  .hero__description {
+    color: #000000;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .hero__wrapper {
+    position: relative;
+    width: @width-tablet;
+    text-align: left;
+    padding-bottom: 0;
+  }
+
+  .hero__title {
+    color: #000000;
+    margin-bottom: 40px;
+  }
+
+  .hero__button {
+    position: absolute;
+    top: 45%;
+  }
+
+  .hero__main-image {
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    .hero {
+      background-image: linear-gradient(to left, rgba(104, 183, 56, 0.85) 50%, rgb(255, 255, 255) 50%, rgb(255, 255, 255));
+    }
+
+    .hero__wrapper {
+      position: static;
+      display: grid;
+      grid-template-areas:
+        " title image "
+        " description image "
+        " button image ";
+      grid-template-columns: 40% 1fr;
+      width: @width-desktop;
+      padding-top: 143px;
+      padding-left: 80px;
+      margin-bottom: 82px;
+    }
+
+    .hero__title {
+      margin-bottom: 0;
+      padding-top: 81px;
+      grid-area: title;
+      align-self: start;
+    }
+
+    .hero__description {
+      align-self: start;
+      justify-self: start;
+    }
+
+    .hero__button {
+      grid-area: button;
+      position: static;
+      grid-column: 1/2;
+      justify-self: start;
+      align-self: start;
+    }
+
+    .hero__main-image {
+      grid-area: image;
+      grid-column: 2/-1;
+      width: 552px;
+      height: 499px;
+    }
+  }
 }

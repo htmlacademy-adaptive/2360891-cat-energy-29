@@ -3,15 +3,53 @@
     url("../../img/background-cat.jpeg");
   background-repeat: no-repeat, no-repeat;
   background-size: auto, 100%;
-  background-position: top;
+  background-position: center, top;
+
+  @media (min-width: 430px) {
+    background-image: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: linear-gradient(to left, rgba(104, 183, 56, 0.85) 50%, rgb(255, 255, 255) 50%, rgb(255, 255, 255)),
+      url("../../img/background-cat-desktop.jpeg");
+    background-size: auto, 50%;
+    background-position: center, right;
+  }
 }
 
 .hero__wrapper {
   width: @width-mobile;
+  max-width: 1440px;
   margin: 0 auto;
   padding-top: 27px;
   padding-bottom: 20px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    width: @width-tablet;
+    text-align: left;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: static;
+    display: grid;
+    grid-template-areas:
+      " title image "
+      " description image "
+      " button image ";
+    grid-template-rows: min-content min-content 1fr;
+    grid-template-columns: 40% 1fr;
+    width: @width-desktop;
+    padding-top: 143px;
+    padding-left: 80px;
+    margin-bottom: 82px;
+  }
 }
 
 .hero__title {
@@ -19,6 +57,22 @@
   margin-bottom: 25px;
   padding: 0;
   color: #ffffff;
+
+  @media (min-width: 430px) {
+    color: #000000;
+  }
+
+  @media (min-width: @tablet-width) {
+    color: #000000;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 40px;
+    padding-top: 81px;
+    grid-area: title;
+    align-self: start;
+  }
 }
 
 .hero__description {
@@ -32,6 +86,22 @@
   font-weight: 400;
   line-height: 14px;
   text-transform: uppercase;
+
+  @media (min-width: 430px) {
+    color: #000000;
+  }
+
+  @media (min-width: @tablet-width) {
+    color: #000000;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    align-self: start;
+    justify-self: start;
+    margin-bottom: 52px;
+  }
 }
 
 .hero__main-image {
@@ -39,88 +109,39 @@
   min-width: 280px;
   margin: 0 auto;
   margin-bottom: 3px;
-}
 
-.hero__button {
-  display: block;
-}
-
-@media (min-width: @tablet-width) {
-  .hero {
-    background-image: none;
-  }
-
-  .hero__description {
-    color: #000000;
-    font-size: 20px;
-    line-height: 20px;
-  }
-
-  .hero__wrapper {
-    position: relative;
-    width: @width-tablet;
-    text-align: left;
-    padding-bottom: 0;
-  }
-
-  .hero__title {
-    color: #000000;
-    margin-bottom: 40px;
-  }
-
-  .hero__button {
-    position: absolute;
-    top: 45%;
-  }
-
-  .hero__main-image {
+  @media (min-width: @tablet-width) {
     margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
-    .hero {
-      background-image: linear-gradient(to left, rgba(104, 183, 56, 0.85) 50%, rgb(255, 255, 255) 50%, rgb(255, 255, 255));
-    }
-
-    .hero__wrapper {
-      position: static;
-      display: grid;
-      grid-template-areas:
-        " title image "
-        " description image "
-        " button image ";
-      grid-template-columns: 40% 1fr;
-      width: @width-desktop;
-      padding-top: 143px;
-      padding-left: 80px;
-      margin-bottom: 82px;
-    }
-
-    .hero__title {
-      margin-bottom: 0;
-      padding-top: 81px;
-      grid-area: title;
-      align-self: start;
-    }
-
-    .hero__description {
-      align-self: start;
-      justify-self: start;
-    }
-
-    .hero__button {
-      grid-area: button;
-      position: static;
-      grid-column: 1/2;
-      justify-self: start;
-      align-self: start;
-    }
-
-    .hero__main-image {
-      grid-area: image;
-      grid-column: 2/-1;
-      width: 552px;
-      height: 499px;
-    }
+    grid-area: image;
+    width: 552px;
+    height: 499px;
+    margin: 0;
+    margin-left: -9%;
   }
 }
+
+.hero__button {
+  display: block;
+
+  @media (min-width: 430px) {
+    width: 280px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 45%;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: button;
+    position: static;
+    justify-self: start;
+    align-self: start;
+  }
+}
+

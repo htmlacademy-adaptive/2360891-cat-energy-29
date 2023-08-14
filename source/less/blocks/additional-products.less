@@ -1,61 +1,206 @@
 
-.additional-products {
+.additional-products__wrapper {
   width: @width-mobile;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: @width-tablet;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 20%;
+    column-gap: 81px;
+    width: @width-desktop;
+    margin-bottom: 87px;
+  }
 }
 
 .additional-products__title {
+  margin: 0;
+  margin-bottom: 36px;
+  padding-top: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
   font-family: @font-secondary;
   font-size: 24px;
   line-height: 24px;
+  border-top: 1px solid #ebebeb;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 70px;
+    margin-bottom: 80px;
+    padding-left: 70px;
+    border-top: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 110px;
+  }
 }
 
 .additional-products__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  &:first-child {
+    border-top: 1px solid #cdcdcd;
+  }
+
+  @media (min-width: @tablet-width) {
+    border: 1px solid #cdcdcd;
+
+    :last-child {
+      border-bottom: none;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    :last-child {
+      border-bottom: 1px solid #cdcdcd;
+    }
+  }
 }
 
 .additional-products__item {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "title title"
+    "description value"
+    "button button";
+  gap: 14px;
+  padding-bottom: 19px;
+  border-bottom: 1px solid #cdcdcd;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 25% 10%;
+    grid-template-areas:
+      "title description value"
+      "button button button";
+    column-gap: 50px;
+    padding-top: 26px;
+    padding-bottom: 28px;
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 35% 16% 15% 30%;
+    grid-template-areas: "title description value button";
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    padding-top: 15px;
+    padding-bottom: 17px;
+  }
 }
 
 .additional-products__item-title {
+  grid-area: title;
+  margin: 0;
+  padding-top: 13px;
   color: #222222;
   font-family: @font-secondary;
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+  }
 }
 
 .additional-products__item-description {
+  grid-area: description;
+  color: #444444;
+  font-size: 14px;
+  line-height: 14px;
+
+  @media (min-width: @tablet-width) {
+    justify-self: end;
+  }
+}
+
+.additional-products__item-value {
+  grid-area: value;
+  justify-self: end;
   color: #444444;
   font-size: 14px;
   line-height: 14px;
 }
 
-.additional-products__item-price {
-  color: #444444;
-  font-size: 14px;
-  line-height: 14px;
+.additional-products__button {
+  grid-area: button;
 }
 
 .additional-products__gift {
-  background-color: rgba(104, 183, 56, 0.85);
+  margin-top: 35px;
+  margin-bottom: 35px;
+  padding-top: 187px;
+  padding-bottom: 43px;
+  padding-left: 58px;
+  padding-right: 58px;
   color: #ffffff;
+  background-color: rgba(104, 183, 56, 0.85);
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85) 100%, rgba(104, 183, 56, 0.85) 100%),
+    url("../../img/cat-gift.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   text-align: center;
   font-size: 16px;
   line-height: 20px;
-}
 
-@media (min-width: @desktop-width) {
-  .additional-products__wrapper {
-    display: flex;
+  &::before {
+    display: block;
+    content: "";
+    margin: 0 auto;
+    margin-top: -128px;
+    margin-bottom: 48px;
+    width: 78px;
+    height: 80px;
+    background-image: url("../../img/icon-gift.svg");
   }
 
-  .additional-products__item {
-    flex-direction: row;
+  @media (min-width: @tablet-width) {
+    position: relative;
+    padding-top: 71px;
+    padding-bottom: 69px;
+    padding-left: 421px;
+    padding-right: 125px;
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85) 100%, rgba(104, 183, 56, 0.85) 100%),
+      url("../../img/cat-gift-tablet.jpeg");
+
+    &::before {
+      position: absolute;
+      margin-top: -2%;
+      margin-left: -350px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding-top: 180px;
+    padding-bottom: 41px;
+    padding-left: 41px;
+    padding-right: 42px;
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85) 100%, rgba(104, 183, 56, 0.85) 100%),
+      url("../../img/cat-gift.jpeg");
+    background-size: 115%;
+    background-position: right;
+
+    &::before {
+      top: 20%;
+      left: 175%;
+    }
   }
 }
+

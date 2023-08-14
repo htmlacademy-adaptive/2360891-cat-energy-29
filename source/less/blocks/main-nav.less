@@ -17,6 +17,17 @@
   padding: 0;
   background-color: #ffffff;
   list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    position: static;
+    display: flex;
+    align-items: center;
+    column-gap: 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: transparent;
+  }
 }
 
 .main-nav__item {
@@ -24,9 +35,15 @@
   padding-bottom: 24px;
   text-align: center;
   border-top: 1px solid #e6e6e6;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    border: none;
+  }
 }
 
 .main-nav__link {
+  position: relative;
   font-size: 20px;
   font-weight: 400;
   line-height: 20px;
@@ -34,29 +51,77 @@
   font-family: "Oswald", sans-serif;
   color: #000000;
   text-decoration: none;
-}
 
-
-@media (min-width: @tablet-width) {
-  .main-nav__menu-list {
-    position: static;
-    display: flex;
-    align-items: center;
-    column-gap: 33px;
+  &:hover {
+    opacity: 0.6;
   }
 
-  .main-nav__item {
-    padding: 0;
-    border: none;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .main-nav__menu-list {
-    background-color: transparent;
+  &:active {
+    opacity: 0.3;
   }
 
-  .main-nav__link {
+  @media (min-width: @tablet-width) {
+    padding-bottom: 10px;
+
+    &--active::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      width: 100%;
+      height: 2px;
+      top: 38px;
+      background-color: #68b738;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
     color: #ffffff;
+
+    &--active::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      width: 100%;
+      height: 2px;
+      top: 38px;
+      background-color: #ffffff;
+    }
   }
 }
+
+.main-nav__link--catalog {
+  @media (min-width: @tablet-width) {
+    &-active::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      width: 100%;
+      height: 2px;
+      top: 38px;
+      background-color: #68b738;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    color: #000000;
+  }
+}
+
+.main-nav__link--form {
+  @media (min-width: @tablet-width) {
+    &-active::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      width: 100%;
+      height: 2px;
+      top: 38px;
+      background-color: #68b738;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    color: #000000;
+  }
+}
+

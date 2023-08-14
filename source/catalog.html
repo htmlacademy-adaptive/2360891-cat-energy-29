@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body class="page__body">
-    <header class="main-header">
-      <div class="main-header__wrapper">
+    <header class="main-header main-header--catalog">
+      <div class="main-header__wrapper main-header__wrapper--catalog">
         <div class="main-header__wrapper-logo">
           <a href="#" class="main-header__logo-image" aria-label="логотип">
               <img src="./img/logo-mobile.svg" height="38" width="33" alt="логотип">
@@ -23,17 +23,17 @@
         <nav class="main-nav main-nav--opened">
           <ul class="main-nav__menu-list">
             <li class="main-nav__item">
-              <a class="main-nav__link" href="./index.html">
+              <a class="main-nav__link main-nav__link--catalog" href="./index.html">
                 Главная
               </a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="./catalog.html">
+              <a class="main-nav__link main-nav__link--catalog main-nav__link--catalog-active" href="./catalog.html">
                 Каталог продукции
               </a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="./form.html">
+              <a class="main-nav__link main-nav__link--catalog" href="./form.html">
                 Подбор программы
               </a>
             </li>
@@ -209,11 +209,11 @@
                 <button class="product__button button" type="button">Заказать</button>
               </div>
             </li>
-            <li class="catalog__products-item product">
-              <div class="product_wrapper">
-                <h3 class="product__title">Показать еще 100500 товаров</h3>
-                <p class="product__descriptio-show">На самом деле вкусов гораздо больше!</p>
-                <button class="button button--show-all" type="button">Показать все</button>
+            <li class="catalog__products-item product-show">
+              <div class="product-show_wrapper">
+                <h3 class="product-show__title">Показать еще 100500 товаров</h3>
+                <p class="product-show__description">На самом деле вкусов гораздо больше!</p>
+                <button class="product-show__button button button--show-all" type="button">Показать все</button>
               </div>
             </li>
           </ul>
@@ -232,8 +232,8 @@
               <span class="additional-products__item-description">
                 1 упаковка (100 г)
               </span>
-              <span class="additional-products__item-price">200р</span>
-              <button class="button" type="button">
+              <span class="additional-products__item-value">200р</span>
+              <button class="additional-products__button button button--additional" type="button">
                 Заказать
               </button>
             </li>
@@ -244,10 +244,10 @@
               <span class="additional-products__item-description">
                 5 литров
               </span>
-              <span class="additional-products__item-price">
+              <span class="additional-products__item-value">
                 50р
               </span>
-              <button class="button" type="button">
+              <button class="additional-products__button button button--additional" type="button">
                 Заказать
               </button>
             </li>
@@ -258,10 +258,10 @@
               <span class="additional-products__item-description">
                 1 литр
               </span>
-              <span class="additional-products__item-price">
+              <span class="additional-products__item-value">
                 100р
               </span>
-              <button class="button" type="button">
+              <button class="additional-products__button button button--additional" type="button">
                 Заказать
               </button>
             </li>
@@ -272,10 +272,10 @@
               <span class="additional-products__item-description">
                 1 упаковка (30 г)
               </span>
-              <span class="additional-products__item-price">
+              <span class="additional-products__item-value">
                 300р
               </span>
-              <button class="button" type="button">
+              <button class="additional-products__button button button--additional" type="button">
                 Заказать
               </button>
             </li>

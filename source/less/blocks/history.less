@@ -1,5 +1,15 @@
 .history {
   background-color: #eaeaea;
+
+  @media (min-width: @tablet-width) {
+    background: linear-gradient(to bottom, #ffffff 70%, #eaeaea 70%);
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: linear-gradient(to bottom, #ffffff 30%, #eaeaea 30%, #eaeaea 70%);
+  }
 }
 
 .history__wrapper {
@@ -7,12 +17,22 @@
   margin: 0 auto;
   margin-bottom: 20px;
   padding-top: 25px;
+
+  @media (min-width: @tablet-width) {
+    width: @width-tablet;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @width-desktop;
+  }
 }
 
 .title-history {
   margin: 0;
   margin-bottom: 40px;
   padding: 0;
+
+  @media (min-width: @tablet-width) {}
 }
 
 .history__intro {
@@ -21,6 +41,11 @@
   padding: 0;
   color: #444444;
   line-height: 18px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .history__list {
@@ -28,26 +53,61 @@
   grid-template-columns: 1fr 1fr;
   column-gap: 32px;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: min-content min-content 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 55px;
+  }
 }
 
 .history__item {
-  margin-bottom: 20px;
+  position: relative;
+  justify-self: center;
+  width: 124px;
+  min-height: 56px;
+  margin-bottom: 34px;
   text-align: center;
+  border: 1px solid #cdcdcd;
   border-radius: 4px;
-  background-image: url("../../img/history-frame.svg");
-  background-repeat: no-repeat;
-  background-position-x: center;
-}
 
-.history__item--price {
-  grid-column: 1/-1;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-  gap: 5px;
-  padding: 0;
-  margin: 0;
-  background-image: none;
+  &--price {
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    width: 100%;
+    gap: 5px;
+    padding: 0;
+    margin: 0;
+    background-image: none;
+    border: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 162px;
+    min-height: 77px;
+    background-size: contain;
+
+    &--price {
+      width: 100%;
+      justify-self: end;
+      grid-column: 3/-1;
+      flex-direction: column-reverse;
+      align-items: end;
+      justify-content: flex-end;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--price {
+      grid-column: 1/-1;
+      flex-direction: row-reverse;
+    }
+  }
 }
 
 .history__value {
@@ -58,24 +118,40 @@
   color: #000000;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
+
+  &--big {
+    padding-top: 14px;
+    padding-bottom: 17px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  &--small {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &--small-price {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &--big {
+      padding-bottom: 15px;
+      font-size: 30px;
+      line-height: 37px;
+    }
+
+    &--small-price {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
 }
 
-.history__value--big {
-  font-size: 24px;
-  line-height: 24px;
-}
-
-.history__value--small {
-  font-size: 14px;
-  line-height: 20px;
-}
-
-.history__value--small-price {
-  margin: 0;
-  padding: 0;
-  font-size: 14px;
-  line-height: 20px;
-}
 
 .history__description {
   margin: 0;
@@ -83,101 +159,59 @@
   color: #000000;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
-}
 
-.history__description--smal {
-  color: #444444;
-  font-family: @fonts-primary;
-  font-size: 12px;
-  line-height: 12px;
-  text-transform: none;
-}
+  &--smal {
+    position: absolute;
+    top: 80%;
+    left: 18%;
+    width: 77px;
+    color: #444444;
+    font-family: @fonts-primary;
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: none;
+    background-color: #eaeaea;
+  }
 
-.history__description--big {
-  font-size: 14px;
-  line-height: 20px;
-}
+  &--big {
+    font-size: 14px;
+    line-height: 20px;
+  }
 
-.history__description--big-price {
-  margin: 0;
-  padding: 0;
-  font-size: 14px;
-  line-height: 20px;
+  &--big-price {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &--smal {
+      width: 135px;
+      padding: 0 2px;
+      top: 90%;
+      left: 9%;
+      background-color: #ffffff;
+      font-size: 14px;
+      line-height: 14px;
+    }
+
+    &--big-price {
+      align-self: stretch;
+      text-align: right;
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--smal {
+      background-color: #eaeaea;
+    }
+  }
 }
 
 .history__slider {
   text-align: center;
 }
 
-@media (min-width: @tablet-width) {
-  .history {
-    background: linear-gradient(to bottom, #ffffff 70%, #eaeaea 70%);
-  }
-
-  .history__wrapper {
-    width: @width-tablet;
-  }
-
-  .history__intro {
-    font-size: 16px;
-    line-height: 24px;
-  }
-
-  .history__list {
-    grid-template-columns: 167px 167px 1fr;
-  }
-
-  .history__item {
-    background-size: contain;
-  }
-
-  .history__item--price {
-    grid-column: 3/-1;
-    flex-direction: column-reverse;
-    align-items: end;
-    justify-content: flex-end;
-  }
-
-  .history__value--big {
-    padding-bottom: 15px;
-    font-size: 30px;
-    line-height: 37px;
-  }
-
-  .history__description--smal {
-    font-size: 12px;
-    line-height: 12px;
-  }
-
-  .history__value--small-price {
-    font-size: 20px;
-    line-height: 20px;
-  }
-
-  .history__description--big-price {
-    font-size: 20px;
-    line-height: 20px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .history {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background: linear-gradient(to bottom, #ffffff 30%, #eaeaea 30%, #eaeaea 70%);
-  }
-
-  .history__list {
-    grid-template-columns: 1fr 1fr;
-    row-gap: 55px;
-  }
-
-  .history__wrapper {
-    width: @width-desktop;
-  }
-
-  .history__item--price {
-    grid-column: 1/-1;
-    flex-direction: row-reverse;
-  }
-}

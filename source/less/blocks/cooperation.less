@@ -18,6 +18,7 @@
 .cooperation__title {
   margin: 0;
   padding: 0;
+  width: 160px;
   color: #111111;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
@@ -27,6 +28,7 @@
 }
 
 .cooperation__address {
+  width: 160px;
   color: #444444;
   font-family: "Lato", sans-serif;
   font-size: 14px;
@@ -35,18 +37,52 @@
   line-height: 20px;
 }
 
+.cooperation__maps {
+  display: block;
+  width: 100%;
+}
+
 @media (min-width: @tablet-width) {
   .cooperation__wrapper {
     width: @width-tablet;
+  }
+
+  .cooperation__address {
+    width: 180px;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: right;
+  }
+
+  .cooperation__title {
+    width: 180px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .cooperation__address-town {
+    display: block;
+    padding-top: 10px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .cooperation {
     background-color: #f2f2f2;
+    position: relative;
   }
 
   .cooperation__wrapper {
-    width: @width-desktop;
+    position: absolute;
+    width: 565px;
+    left: 110px;
+    top: 120px;
+    padding: 60px 80px;
+    background-color: #ffffff;
+    margin-bottom: -350px;
+  }
+
+  .cooperation__maps {
+    min-height: 400px;
   }
 }

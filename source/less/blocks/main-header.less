@@ -1,26 +1,115 @@
 .main-header {
-  width: @width-mobile;
-  margin: 0 auto;
   background-color: #ffffff;
-}
 
-.main-header__wrapper {
-  display: flex;
-}
-
-
-@media (min-width: @tablet-width) {
-  .main-header {
-    display: flex;
-    justify-content: space-between;
-    width: @width-tablet;
+  @media (min-width: @desktop-width) {
+    background-color: transparent;
   }
 }
 
-@media (min-width: @desktop-width) {
-  .main-header {
+.main-header__wrapper {
+  &--form {
+    border-bottom: 1px solid #d9d9d9;
+  }
+
+  @media (min-width: @tablet-width) {
     display: flex;
+    align-items: center;
+    padding-top: 25px;
     justify-content: space-between;
+    width: @width-tablet;
+    margin: 0 auto;
+
+    &--form {
+      border-bottom: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
     width: @width-desktop;
+    max-width: 1440px;
+    margin-bottom: -100px;
+    padding: 0;
+    padding-top: 55px;
+
+    &--catalog {
+      padding-top: 55px;
+      margin-bottom: 9px;
+    }
+
+    &--form {
+      padding-top: 55px;
+      margin-bottom: 9px;
+      border-bottom: none;
+    }
+  }
+}
+
+.main-header__wrapper-logo {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: @width-mobile;
+  margin: 0 auto;
+  padding-top: 13px;
+  padding-bottom: 14px;
+
+  @media (min-width: @tablet-width) {
+    justify-content: start;
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.main-header__toggle {
+  padding: 4px 0;
+  width: 24px;
+  height: 24px;
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-header__toggle--close {
+  background-image: url("../../img/burger-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main-header__toggle--open {
+  background-image: url("../../img/close-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main-header__logo-text {
+  position: absolute;
+  top: 35%;
+  left: calc(50% - 53px);
+
+  @media (min-width: @tablet-width) {
+    position: static;
+  }
+}
+
+.main-header__logo-image {
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    gap: 13px;
   }
 }

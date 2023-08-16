@@ -1,6 +1,21 @@
+.product-show {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 12%;
+    width: 100%;
+    height: calc(100% - 12%);
+    border: 1px solid #f2f2f2;
+  }
+}
+
 .product-show_wrapper {
   display: grid;
   width: @width-mobile;
+  height: 100%;
   margin: 0 auto;
   padding-top: 58px;
   background-image: url("../../img/plus.svg");
@@ -11,10 +26,10 @@
   @media (min-width: @tablet-width) {
     position: relative;
     grid-template-columns: 1fr;
-    grid-template-rows: 200px 1fr;
+    grid-template-rows: 240px 1fr;
     padding-top: 0;
     background-size: 60px 60px;
-    background-position-y: 55px;
+    background-position-y: 25%;
   }
 }
 

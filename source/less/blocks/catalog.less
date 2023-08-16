@@ -5,6 +5,7 @@
 .catalog__wrapper {
   margin: 0 auto;
   padding-top: 27px;
+  border-bottom: 1px solid #ebebeb;
 }
 
 .catalog__title {
@@ -28,11 +29,13 @@
 @media (min-width: @tablet-width) {
   .catalog {
     border-top: none;
+    margin-bottom: 70px;
   }
 
   .catalog__wrapper {
     width: @width-tablet;
     padding-top: 65px;
+    border-bottom: none;
   }
 
   .catalog__products-list {
@@ -47,7 +50,7 @@
     padding-left: 37px;
     padding-right: 37px;
     border: none;
-    background-image: linear-gradient(#ffffff 10%, #f2f2f2 10%, #f2f2f2);
+    background-image: linear-gradient(#ffffff 12%, #f2f2f2 12%, #f2f2f2);
 
     &:last-child {
       background-image: none;

@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./favicon.ico">
+    <link rel="icon" href="./img/favicon/favicon-32.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./img/favicon/favicon-180.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="./css/style.css">
   </head>
@@ -11,8 +15,12 @@
       <div class="main-header__wrapper main-header__wrapper--catalog">
         <div class="main-header__wrapper-logo">
           <a href="#" class="main-header__logo-image" aria-label="логотип">
-              <img src="./img/logo-mobile.svg" height="38" width="33" alt="логотип">
-              <img class="main-header__logo-text" src="./img/logo-text.svg" width="101" height="18" alt="логотип текстом">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="./img/logo/logo-picture-desktop.svg">
+              <source media="(min-width: 768px)" srcset="./img/logo/logo-picture-tablet.svg">
+              <img src="./img/logo/logo-mobile.svg" height="38" width="33" alt="логотип">
+            </picture>
+              <img class="main-header__logo-text" src="./img/logo/logo-text.svg" width="101" height="18" alt="логотип текстом">
           </a>
           <button class="main-header__toggle main-header__toggle--open" type="button">
             <span class="visually-hidden">
@@ -50,7 +58,12 @@
           <ul class="catalog__products-list">
             <li class="catalog__products-item product">
               <div class="product_wrapper">
-                <img class="product__image" src="./img/catalog-1-500.png" width="68" height="86" alt="Cat Energy PRO 500г">
+                <div class="product_image-wrapper">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="./img/catalog/tablet/tablet-catalog-1-500.png 1x, ./img/catalog/tablet/tablet-catalog-1-500.png 2x">
+                    <img class="product__image product__image--small " src="./img/catalog/mobile/mobile-catalog-1-500.jpg" srcset="./img/catalog/mobile/mobile-catalog-1-500@2x.jpg 2x" width="68" height="86" alt="Cat Energy PRO 500г">
+                  </picture>
+                </div>
                 <h3 class="product__title">
                   Cat Energy PRO 500 г
                 </h3>
@@ -73,7 +86,12 @@
             </li>
             <li class="catalog__products-item product">
               <div class="product_wrapper">
-                <img class="product__image" src="./img/catalog-1-1000.png" width="84" height="100" alt="Cat Energy PRO 1000г">
+                <div class="product_image-wrapper">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="./img/catalog/tablet/tablet-catalog-1-1000.png 1x, ./img/catalog/tablet/tablet-catalog-1-1000.png 2x">
+                    <img class="product__image product__image--large" src="./img/catalog/mobile/mobile-catalog-1-1000.jpg" srcset="./img/catalog/mobile/mobile-catalog-1-1000@2x.jpg 2x" width="84" height="100" alt="Cat Energy PRO 1000г">
+                  </picture>
+                </div>
                 <h3 class="product__title">
                   Cat Energy PRO 1000 г
                 </h3>
@@ -96,7 +114,12 @@
             </li>
             <li class="catalog__products-item product">
               <div class="product_wrapper">
-                <img class="product__image" src="./img/catalog-2-500.png" width="68" height="86" alt="Cat Energy PRO 500г">
+                <div class="product_image-wrapper">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="./img/catalog/tablet/tablet-catalog-2-500.png 1x, ./img/catalog/tablet/tablet-catalog-2-500.png 2x">
+                    <img class="product__image product__image--small " src="./img/catalog/mobile/mobile-catalog-2-500.jpg" srcset="./img/catalog/mobile/mobile-catalog-2-500@2x.jpg 2x" width="68" height="86" alt="Cat Energy PRO 500г">
+                  </picture>
+                </div>
                 <h3 class="product__title">
                   Cat Energy PRO 500 г
                 </h3>
@@ -119,7 +142,12 @@
             </li>
             <li class="catalog__products-item product">
               <div class="product_wrapper">
-                <img class="product__image" src="./img/catalog-2-1000.png" width="84" height="100" alt="Cat Energy PRO 1000г">
+                <div class="product_image-wrapper">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="./img/catalog/tablet/tablet-catalog-2-1000.png 1x, ./img/catalog/tablet/tablet-catalog-2-1000.png 2x">
+                    <img class="product__image product__image--large" src="./img/catalog/mobile/mobile-catalog-2-1000.jpg" srcset="./img/catalog/mobile/mobile-catalog-2-1000@2x.jpg 2x" width="84" height="100" alt="Cat Energy PRO 1000г">
+                  </picture>
+                </div>
                 <h3 class="product__title">
                   Cat Energy PRO 1000 г
                 </h3>
@@ -142,7 +170,12 @@
             </li>
             <li class="catalog__products-item product">
               <div class="product_wrapper">
-                <img class="product__image" src="./img/catalog-3-500.png" width="68" height="86" alt="Cat Energy PRO 500г">
+                <div class="product_image-wrapper">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="./img/catalog/tablet/tablet-catalog-3-500.png 1x, ./img/catalog/tablet/tablet-catalog-3-500.png 2x">
+                    <img class="product__image product__image--small " src="./img/catalog/mobile/mobile-catalog-3-500.jpg" srcset="./img/catalog/mobile/mobile-catalog-3-500@2x.jpg 2x" width="68" height="86" alt="Cat Energy PRO 500г">
+                  </picture>
+                </div>
                 <h3 class="product__title">
                   Cat Energy PRO 500 г
                 </h3>
@@ -165,7 +198,12 @@
             </li>
             <li class="catalog__products-item product">
               <div class="product_wrapper">
-                <img class="product__image" src="./img/catalog-3-1000.png" width="84" height="100" alt="Cat Energy PRO 1000г">
+                <div class="product_image-wrapper">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="./img/catalog/tablet/tablet-catalog-3-1000.png 1x, ./img/catalog/tablet/tablet-catalog-3-1000.png 2x">
+                    <img class="product__image product__image--large" src="./img/catalog/mobile/mobile-catalog-3-1000.jpg" srcset="./img/catalog/mobile/mobile-catalog-3-1000@2x.jpg 2x" width="84" height="100" alt="Cat Energy PRO 1000г">
+                  </picture>
+                </div>
                 <h3 class="product__title">
                   Cat Energy PRO 1000 г
                 </h3>
@@ -188,7 +226,12 @@
             </li>
             <li class="catalog__products-item product">
               <div class="product_wrapper">
-                <img class="product__image" src="./img/catalog-4-500.png" width="68" height="86" alt="Cat Energy PRO 500г">
+                <div class="product_image-wrapper">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="./img/catalog/tablet/tablet-catalog-4-500.png 1x, ./img/catalog/tablet/tablet-catalog-4-500.png 2x">
+                    <img class="product__image product__image--small " src="./img/catalog/mobile/mobile-catalog-4-500.jpg" srcset="./img/catalog/mobile/mobile-catalog-4-500@2x.jpg 2x" width="68" height="86" alt="Cat Energy PRO 500г">
+                  </picture>
+                </div>
                 <h3 class="product__title">
                   Cat Energy PRO 500 г
                 </h3>

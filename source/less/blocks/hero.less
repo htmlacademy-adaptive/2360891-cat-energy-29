@@ -5,6 +5,11 @@
   background-size: auto, 100%;
   background-position: center, top;
 
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85) 61%, rgb(255, 255, 255) 61%, rgb(255, 255, 255)),
+      url("../../img/background-hero/hero-background-mobile@2x.jpg");
+  }
+
   @media (min-width: 430px) {
     background-image: none;
   }
@@ -15,9 +20,14 @@
 
   @media (min-width: @desktop-width) {
     background-image: linear-gradient(to left, rgba(104, 183, 56, 0.85) 50%, rgb(255, 255, 255) 50%, rgb(255, 255, 255)),
-      url("../../img/background-cat-desktop.jpeg");
+      url("../../img/background-hero/hero-background-desktop.jpg");
     background-size: auto, 50%;
     background-position: center, right;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(to left, rgba(104, 183, 56, 0.85) 50%, rgb(255, 255, 255) 50%, rgb(255, 255, 255)),
+        url("../../img/background-hero/hero-background-desktop@2x.jpg");
+    }
   }
 }
 
@@ -65,13 +75,15 @@
   @media (min-width: @tablet-width) {
     color: #000000;
     margin-bottom: 40px;
+    padding-left: 8%;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 40px;
-    padding-top: 81px;
     grid-area: title;
     align-self: start;
+    margin-bottom: 40px;
+    padding-top: 81px;
+    padding-left: 0;
   }
 }
 
@@ -92,6 +104,7 @@
   }
 
   @media (min-width: @tablet-width) {
+    padding-left: 8%;
     color: #000000;
     font-size: 20px;
     line-height: 20px;
@@ -101,13 +114,11 @@
     align-self: start;
     justify-self: start;
     margin-bottom: 52px;
+    padding-left: 0;
   }
 }
 
-.hero__main-image {
-  display: block;
-  min-width: 280px;
-  margin: 0 auto;
+.hero__main-wrapper-image {
   margin-bottom: 3px;
 
   @media (min-width: @tablet-width) {
@@ -116,10 +127,22 @@
 
   @media (min-width: @desktop-width) {
     grid-area: image;
+    margin-left: -9%;
+  }
+}
+
+.hero__main-image {
+  display: block;
+  min-width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 709px;
+  }
+
+  @media (min-width: @desktop-width) {
     width: 552px;
     height: 499px;
-    margin: 0;
-    margin-left: -9%;
   }
 }
 
@@ -133,7 +156,8 @@
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    top: 45%;
+    top: 32%;
+    left: 8%;
     margin: 0;
   }
 

@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./favicon.ico">
+    <link rel="icon" href="./img/favicon/favicon-32.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./img/favicon/favicon-180.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="./css/style.css">
   </head>
@@ -11,8 +15,12 @@
       <div class="main-header__wrapper">
         <div class="main-header__wrapper-logo">
           <a href="#" class="main-header__logo-image" aria-label="логотип">
-              <img src="./img/logo-mobile.svg" height="38" width="33" alt="логотип">
-              <img class="main-header__logo-text" src="./img/logo-text.svg" width="101" height="18" alt="логотип текстом">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="./img/logo/logo-picture-desktop.svg">
+              <source media="(min-width: 768px)" srcset="./img/logo/logo-picture-tablet.svg">
+              <img src="./img/logo/logo-mobile.svg" height="38" width="33" alt="логотип">
+            </picture>
+              <img class="main-header__logo-text" src="./img/logo/logo-text.svg" width="101" height="18" alt="логотип текстом">
           </a>
           <button class="main-header__toggle main-header__toggle--open" type="button">
             <span class="visually-hidden">
@@ -50,7 +58,13 @@
           <p class="hero__description">
             Занялся собой? Займись котом!
           </p>
-          <img class="hero__main-image" src="./img/main-image.png" width="280" height="270" alt="банка еды со вкусом курицы">
+          <div class="hero__main-wrapper-image">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="./img/hero/hero-desktop.png 1x, ./img/hero/hero-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="./img/hero/hero-tablet.jpg 1x, ./img/hero/hero-tablet@2x.jpg 2x">
+              <img class="hero__main-image" src="./img/hero/hero-mobile.png" srcset="./img/hero/hero-mobile@2x.png 2x"  width="280" height="270" alt="банка еды со вкусом курицы">
+            </picture>
+          </div>
           <a class="hero__button button button--hero" href="#">
             Подобрать программу
           </a>
@@ -103,6 +117,7 @@
               <span class="advantage-icon advantage-icon--sheet"></span>
               <p class="advantage__description">
                 Функциональное питание
+
                 содержит только полезные
                 питательные вещества.
               </p>
@@ -171,8 +186,14 @@
           </dl>
         </div>
         <div class="history__slider">
-          <img class="history__slider-image" src="./img/cat-1.png" width="280" height="256" alt="толстый кот">
-          <!-- <img class="history__slider-image" src="./img/cat-2.png" width="280" height="256" alt="худой кот"> -->
+          <picture>
+            <source media="(min-width: 768px)" srcset="./img/slider/tablet-before.png 1x, ./img/slider/tablet-before@2x.png 2x">
+            <img class="history__slider-image" src="./img/slider/mobile-before.png" srcset="./img/slider/mobile-before@2x.png 2x" width="280" height="256" alt="толстый кот">
+          </picture>
+          <picture>
+            <source media="(min-width: 768px)" srcset="./img/slider/tablet-after.png 1x, ./img/slider/tablet-after@2x.png 2x">
+            <img class="history__slider-image" src="./img/slider/mobile-after.png" srcset="./img/slider/mobile-after@2x.png 2x" width="280" height="256" alt="худой кот">
+          </picture>
         </div>
       </section>
       <section class="cooperation">

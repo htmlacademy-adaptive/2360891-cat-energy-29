@@ -5,8 +5,23 @@
   line-height: 36px;
 
   &--form {
+    position: relative;
+    background-color: #ffffff;
+    padding-right: 20px;
+    padding-left: 20px;
     font-size: 24px;
     line-height: 26px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 15px;
+      left: 0;
+      width: 100vw;
+      height: 2px;
+      background-color: #68b738;
+      z-index: -1;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -14,8 +29,21 @@
     line-height: 60px;
 
     &--form {
+      padding-right: 40px;
+      padding-left: 40px;
       font-size: 36px;
       line-height: 36px;
+
+      &::before {
+        top: 20px;
+        left: -30px;
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      left: -70px;
     }
   }
 }

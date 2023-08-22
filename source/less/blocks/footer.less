@@ -13,6 +13,14 @@
 .footer__logo {
   margin: 0 auto;
   text-decoration: none;
+
+  :hover {
+    fill: #3e3e3e;
+  }
+
+  :active {
+    fill: #6b6b6b;
+  }
 }
 
 .footel__social-list {
@@ -25,12 +33,37 @@
   list-style-type: none;
 }
 
+.footel__social-link {
+  :hover {
+    fill: #68b738;
+  }
+
+  :active {
+    fill: #68b738;
+    opacity: 0.5;
+  }
+}
+
+.footer__logo-academy-wrapper {
+  @media (min-width: @tablet-width) {
+    justify-self: end;
+  }
+}
+
 .footer__logo-academy {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
 
+  &:hover {
+    --svg-logo-color: #68b738;
+  }
+
+  &:active {
+    --svg-logo-color: #68b738;
+    opacity: 0.3;
+  }
+}
 
 @media (min-width: @tablet-width) {
   .footer__section {
@@ -45,7 +78,7 @@
   }
 
   .footer__logo-academy {
-    justify-content: end;
+    width: fit-content;
     gap: 23px;
   }
 

@@ -56,7 +56,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 380px;
+    width: 310px;
     margin-left: 110px;
 
     &::before {
@@ -182,6 +182,11 @@
   font-size: 16px;
   line-height: 20px;
 
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85) 100%, rgba(104, 183, 56, 0.85) 100%),
+      url("../../img/cat-gift@2x.jpg");
+  }
+
   &::before {
     display: block;
     content: "";
@@ -202,6 +207,11 @@
     background-image: linear-gradient(rgba(104, 183, 56, 0.85) 100%, rgba(104, 183, 56, 0.85) 100%),
       url("../../img/cat-gift-tablet.jpeg");
 
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85) 100%, rgba(104, 183, 56, 0.85) 100%),
+        url("../../img/cat-gift-tablet@2x.jpg");
+    }
+
     &::before {
       position: absolute;
       margin-top: -2%;
@@ -216,9 +226,13 @@
     padding-left: 41px;
     padding-right: 42px;
     background-image: linear-gradient(rgba(104, 183, 56, 0.85) 100%, rgba(104, 183, 56, 0.85) 100%),
-      url("../../img/cat-gift.jpeg");
-    background-size: 115%;
+      url("../../img/cat-gift-desktop.jpeg");
     background-position: right;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85) 100%, rgba(104, 183, 56, 0.85) 100%),
+        url("../../img/cat-gift-desktop@2x.jpg");
+    }
 
     &::before {
       top: 20%;

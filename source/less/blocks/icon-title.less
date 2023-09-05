@@ -7,6 +7,16 @@
   border-radius: 50%;
   background-repeat: no-repeat;
   background-position-x: center;
+
+  @media (min-width: @tablet-width) {
+    width: 200px;
+    height: 200px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .icon-ttile--cat::before {
@@ -18,6 +28,21 @@
   height: 50px;
   background-image: url("../../img/cat-slim.svg");
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: -10px;
+    left: 30px;
+    width: 140px;
+    height: 194px;
+    background-size: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -6px;
+    left: 13px;
+    width: 70px;
+    height: 98px;
+  }
 }
 
 .icon-ttile--puma::before {
@@ -29,63 +54,22 @@
   height: 28px;
   background-image: url("../../img/cat-pro.svg");
   background-repeat: no-repeat;
-}
 
-
-@media (min-width: @tablet-width) {
-  .icon-title {
-    width: 200px;
-    height: 200px;
-  }
-
-  .icon-ttile--cat::before {
-    position: absolute;
-    content: "";
-    top: -10px;
-    left: 30px;
-    width: 140px;
-    height: 194px;
-    background-image: url("../../img/cat-slim.svg");
-    background-size: 100%;
-  }
-
-  .icon-ttile--puma::before {
-    position: absolute;
-    content: "";
-    top: 40px;
-    left: -30px;
-    width: 268px;
+  @media (min-width: @tablet-width) {
+    top: 42px;
+    left: -35px;
+    width: 270px;
     height: 112px;
-    background-image: url("../../img/cat-pro.svg");
+    background-image: url("../../img/cat-pro-tablet.svg");
     background-size: 100%;
     background-position: center;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .icon-title {
-    width: 100px;
-    height: 100px;
-  }
-
-  .icon-ttile--cat::before {
-    position: absolute;
-    content: "";
-    top: -10px;
-    left: 10px;
-    width: 70px;
-    height: 98px;
-    background-image: url("../../img/cat-slim.svg");
-  }
-
-  .icon-ttile--puma::before {
-    position: absolute;
-    content: "";
-    top: 25px;
-    left: -15px;
+  @media (min-width: @desktop-width) {
+    top: 20px;
+    left: -20px;
     width: 134px;
     height: 56px;
-    background-image: url("../../img/cat-pro.svg");
     background-position: center;
   }
 }

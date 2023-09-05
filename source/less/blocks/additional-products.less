@@ -6,6 +6,7 @@
   @media (min-width: @tablet-width) {
     width: @width-tablet;
     margin: 0 auto;
+    margin-bottom: 76px;
   }
 
   @media (min-width: @desktop-width) {
@@ -13,6 +14,7 @@
     grid-template-columns: 1fr 20%;
     column-gap: 81px;
     width: @width-desktop;
+    max-width: 1220px;
     margin-bottom: 87px;
   }
 }
@@ -21,7 +23,7 @@
   position: relative;
   width: 270px;
   margin: 0;
-  margin-bottom: 36px;
+  margin-bottom: 33px;
   padding-top: 25px;
   padding-left: 20px;
   padding-right: 20px;
@@ -33,6 +35,7 @@
   &::before {
     position: absolute;
     content: "";
+    left: 0;
     top: 40px;
     width: 100vw;
     height: 2px;
@@ -41,26 +44,29 @@
   }
 
   @media (min-width: @tablet-width) {
-    width: 310px;
+    width: 419px;
     margin-bottom: 80px;
     margin-left: 30px;
     padding-top: 0;
     padding-left: 40px;
     padding-right: 40px;
     border-top: none;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 36px;
 
     &::before {
       left: -30px;
-      top: 15px;
+      top: 22px;
     }
   }
 
   @media (min-width: @desktop-width) {
-    width: 380px;
-    margin-left: 110px;
+    width: 419px;
+    margin-left: 70px;
 
     &::before {
-      left: -110px;
+      left: -70px;
     }
   }
 }
@@ -76,6 +82,7 @@
 
   @media (min-width: @tablet-width) {
     border: 1px solid #cdcdcd;
+    margin-bottom: 72px;
 
     :last-child {
       border-bottom: none;
@@ -84,6 +91,7 @@
 
   @media (min-width: @desktop-width) {
     border: none;
+    margin-bottom: 0;
 
     :last-child {
       border-bottom: 1px solid #cdcdcd;
@@ -99,7 +107,7 @@
     "description value"
     "button button";
   gap: 14px;
-  padding-bottom: 19px;
+  padding-bottom: 18px;
   border-bottom: 1px solid #cdcdcd;
 
   @media (min-width: @tablet-width) {
@@ -107,7 +115,8 @@
     grid-template-areas:
       "title description value"
       "button button button";
-    column-gap: 50px;
+    column-gap: 31px;
+    row-gap: 27px;
     padding-top: 26px;
     padding-bottom: 28px;
     padding-left: 38px;
@@ -115,13 +124,13 @@
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 35% 16% 15% 30%;
+    grid-template-columns: 35.3% 16% 15% 30%;
     grid-template-areas: "title description value button";
     align-items: center;
     gap: 10px;
     padding: 0;
     padding-top: 15px;
-    padding-bottom: 17px;
+    padding-bottom: 19px;
   }
 }
 
@@ -138,6 +147,9 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 0;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
   }
 }
 
@@ -149,6 +161,13 @@
 
   @media (min-width: @tablet-width) {
     justify-self: end;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-self: start;
   }
 }
 
@@ -158,10 +177,21 @@
   color: #444444;
   font-size: 14px;
   line-height: 14px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
 }
 
 .additional-products__button {
   grid-area: button;
+
+  @media (min-width: @desktop-width) {
+    margin-left: 28px;
+  }
 }
 
 .additional-products__gift {
@@ -182,6 +212,11 @@
   font-size: 16px;
   line-height: 20px;
 
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85) 100%, rgba(104, 183, 56, 0.85) 100%),
+      url("../../img/cat-gift@2x.jpg");
+  }
+
   &::before {
     display: block;
     content: "";
@@ -199,30 +234,42 @@
     padding-bottom: 69px;
     padding-left: 421px;
     padding-right: 125px;
+    text-align: left;
     background-image: linear-gradient(rgba(104, 183, 56, 0.85) 100%, rgba(104, 183, 56, 0.85) 100%),
       url("../../img/cat-gift-tablet.jpeg");
 
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85) 100%, rgba(104, 183, 56, 0.85) 100%),
+        url("../../img/cat-gift-tablet@2x.jpg");
+    }
+
     &::before {
       position: absolute;
-      margin-top: -2%;
-      margin-left: -350px;
+      margin-top: -1.9%;
+      margin-left: -342px;
     }
   }
 
   @media (min-width: @desktop-width) {
     margin: 0;
-    padding-top: 180px;
-    padding-bottom: 41px;
+    padding-top: 185px;
+    padding-bottom: 0;
     padding-left: 41px;
     padding-right: 42px;
     background-image: linear-gradient(rgba(104, 183, 56, 0.85) 100%, rgba(104, 183, 56, 0.85) 100%),
-      url("../../img/cat-gift.jpeg");
-    background-size: 115%;
-    background-position: right;
+      url("../../img/cat-gift-desktop.jpeg");
+    background-position: top;
+    background-size: 100%;
+    text-align: center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85) 100%, rgba(104, 183, 56, 0.85) 100%),
+        url("../../img/cat-gift-desktop@2x.jpg");
+    }
 
     &::before {
-      top: 20%;
-      left: 175%;
+      top: 21%;
+      left: 174%;
     }
   }
 }

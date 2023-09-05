@@ -1,5 +1,10 @@
 .cooperation {
   background-color: #ffffff;
+
+  @media (min-width: @desktop-width) {
+    background-color: #f2f2f2;
+    position: relative;
+  }
 }
 
 .cooperation--another-page {
@@ -13,6 +18,34 @@
   padding: 26px 0;
   margin: 0 auto;
   width: @width-mobile;
+
+  @media (min-width: @tablet-width) {
+    width: @width-tablet;
+    margin-bottom: 34px;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    &--catalog {
+      padding-top: 61px;
+    }
+
+    &--form {
+      padding-top: 61px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    justify-content: flex-start;
+    gap: 90px;
+    width: 565px;
+    left: 110px;
+    top: 95px;
+    padding: 59px 80px;
+    background-color: #ffffff;
+    margin-bottom: -350px;
+  }
 }
 
 .cooperation__title {
@@ -25,6 +58,12 @@
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    width: 180px;
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .cooperation__address {
@@ -35,54 +74,36 @@
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 180px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+  }
+}
+
+.cooperation__address-town {
+  @media (min-width: @tablet-width) {
+    display: block;
+    padding-top: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    padding-top: 20px;
+  }
 }
 
 .cooperation__maps {
   display: block;
   width: 100%;
-}
 
-@media (min-width: @tablet-width) {
-  .cooperation__wrapper {
-    width: @width-tablet;
-  }
-
-  .cooperation__address {
-    width: 180px;
-    font-size: 16px;
-    line-height: 26px;
-    text-align: right;
-  }
-
-  .cooperation__title {
-    width: 180px;
-    font-size: 20px;
-    line-height: 26px;
-  }
-
-  .cooperation__address-town {
-    display: block;
-    padding-top: 10px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .cooperation {
-    background-color: #f2f2f2;
-    position: relative;
-  }
-
-  .cooperation__wrapper {
-    position: absolute;
-    width: 565px;
-    left: 110px;
-    top: 120px;
-    padding: 60px 80px;
-    background-color: #ffffff;
-    margin-bottom: -350px;
-  }
-
-  .cooperation__maps {
+  @media (min-width: @tablet-width) {
     min-height: 400px;
   }
 }

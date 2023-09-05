@@ -10,7 +10,23 @@
   margin: 0 auto;
   padding: 0;
   width: @width-mobile;
+  max-width: 1220px;
   list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    width: @width-tablet;
+    gap: 30px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: row;
+    gap: 80px;
+    width: @width-desktop;
+    margin-bottom: 71px;
+  }
 }
 
 .programs__list--tablet {
@@ -19,22 +35,4 @@
 
 .programs__item {
   text-align: left;
-}
-
-@media (min-width: @tablet-width) {
-  .programs__list {
-    width: @width-tablet;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .programs__list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    flex-direction: row;
-    gap: 80px;
-    width: @width-desktop;
-    margin-bottom: 71px;
-  }
 }

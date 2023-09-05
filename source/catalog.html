@@ -16,11 +16,13 @@
         <div class="main-header__wrapper-logo">
           <a href="#" class="main-header__logo-image" aria-label="логотип">
             <picture>
-              <source media="(min-width: 1440px)" srcset="./img/logo/logo-picture-desktop.svg">
-              <source media="(min-width: 768px)" srcset="./img/logo/logo-picture-tablet.svg">
-              <img src="./img/logo/logo-mobile.svg" height="38" width="33" alt="логотип">
+              <source class="main-header__logo-image-icon" media="(min-width: 1440px)" srcset="./img/logo/logo-picture-desktop.svg" height="59" width="70">
+              <source class="main-header__logo-image-icon" media="(min-width: 768px)" srcset="./img/logo/logo-picture-tablet.svg" height="60" width="60">
+              <img class="main-header__logo-image-icon" src="./img/logo/logo-mobile.svg" height="38" width="33" alt="логотип">
             </picture>
-              <img class="main-header__logo-text" src="./img/logo/logo-text.svg" width="101" height="18" alt="логотип текстом">
+            <svg class="main-header__logo-text" width="101" height="18" aria-label="логотип текстом">
+              <use xlink:href="./img/sprite.svg#logo-text"></use>
+            </svg>
           </a>
           <button class="main-header__toggle main-header__toggle--open" type="button">
             <span class="visually-hidden">
@@ -60,7 +62,7 @@
               <div class="product_wrapper">
                 <div class="product_image-wrapper">
                   <picture>
-                    <source media="(min-width: 768px)" srcset="./img/catalog/tablet/tablet-catalog-1-500.png 1x, ./img/catalog/tablet/tablet-catalog-1-500@2x.png 2x">
+                    <source media="(min-width: 768px)" srcset="./img/catalog/tablet/tablet-catalog-1-500.png 1x, ./img/catalog/tablet/tablet-catalog-1-500@2x.png 2x" width="181" height="185">
                     <img class="product__image product__image--small " src="./img/catalog/mobile/mobile-catalog-1-500.jpg" srcset="./img/catalog/mobile/mobile-catalog-1-500@2x.jpg 2x" width="68" height="86" alt="Cat Energy PRO 500г">
                   </picture>
                 </div>
@@ -173,11 +175,11 @@
                 <div class="product_image-wrapper">
                   <picture>
                     <source media="(min-width: 768px)" srcset="./img/catalog/tablet/tablet-catalog-3-500.png 1x, ./img/catalog/tablet/tablet-catalog-3-500@2x.png 2x">
-                    <img class="product__image product__image--small " src="./img/catalog/mobile/mobile-catalog-3-500.jpg" srcset="./img/catalog/mobile/mobile-catalog-3-500@2x.jpg 2x" width="68" height="86" alt="Cat Energy PRO 500г">
+                    <img class="product__image product__image--small" src="./img/catalog/mobile/mobile-catalog-3-500.jpg" srcset="./img/catalog/mobile/mobile-catalog-3-500@2x.jpg 2x" width="68" height="86" alt="Cat Energy Slim 500г">
                   </picture>
                 </div>
                 <h3 class="product__title">
-                  Cat Energy PRO 500 г
+                  Cat Energy Slim 500 г
                 </h3>
                 <dl class="product__info-list">
                   <div class="product__info-item">
@@ -186,7 +188,7 @@
                   </div>
                   <div class="product__info-item">
                     <dt class="product__info-title">Вкус</dt>
-                    <dd class="product__info-total">Греча</dd>
+                    <dd class="product__info-total">Гречка</dd>
                   </div>
                   <div class="product__info-item">
                     <dt class="product__info-title">Цена</dt>
@@ -205,7 +207,7 @@
                   </picture>
                 </div>
                 <h3 class="product__title">
-                  Cat Energy PRO 1000 г
+                  Cat Energy Slim 1000 г
                 </h3>
                 <dl class="product__info-list">
                   <div class="product__info-item">
@@ -214,7 +216,7 @@
                   </div>
                   <div class="product__info-item">
                     <dt class="product__info-title">Вкус</dt>
-                    <dd class="product__info-total">Греча</dd>
+                    <dd class="product__info-total">Гречка</dd>
                   </div>
                   <div class="product__info-item">
                     <dt class="product__info-title">Цена</dt>
@@ -229,11 +231,11 @@
                 <div class="product_image-wrapper">
                   <picture>
                     <source media="(min-width: 768px)" srcset="./img/catalog/tablet/tablet-catalog-4-500.png 1x, ./img/catalog/tablet/tablet-catalog-4-500@2x.png 2x">
-                    <img class="product__image product__image--small " src="./img/catalog/mobile/mobile-catalog-4-500.jpg" srcset="./img/catalog/mobile/mobile-catalog-4-500@2x.jpg 2x" width="68" height="86" alt="Cat Energy PRO 500г">
+                    <img class="product__image product__image--small " src="./img/catalog/mobile/mobile-catalog-4-500.jpg" srcset="./img/catalog/mobile/mobile-catalog-4-500@2x.jpg 2x" width="84" height="100" alt="Cat Energy Slim 500г">
                   </picture>
                 </div>
                 <h3 class="product__title">
-                  Cat Energy PRO 500 г
+                  Cat Energy Slim 500 г
                 </h3>
                 <dl class="product__info-list">
                   <div class="product__info-item">
@@ -246,7 +248,7 @@
                   </div>
                   <div class="product__info-item">
                     <dt class="product__info-title">Цена</dt>
-                    <dd class="product__info-total">700 &#x20bd;</dd>
+                    <dd class="product__info-total">500 &#x20bd;</dd>
                   </div>
                 </dl>
                 <button class="product__button button" type="button">Заказать</button>
@@ -275,7 +277,9 @@
               <span class="additional-products__item-description">
                 1 упаковка (100 г)
               </span>
-              <span class="additional-products__item-value">200р</span>
+              <span class="additional-products__item-value">
+                200 &#x20bd;
+              </span>
               <button class="additional-products__button button button--additional" type="button">
                 Заказать
               </button>
@@ -288,7 +292,7 @@
                 5 литров
               </span>
               <span class="additional-products__item-value">
-                50р
+                50 &#x20bd;
               </span>
               <button class="additional-products__button button button--additional" type="button">
                 Заказать
@@ -302,7 +306,7 @@
                 1 литр
               </span>
               <span class="additional-products__item-value">
-                100р
+                100 &#x20bd;
               </span>
               <button class="additional-products__button button button--additional" type="button">
                 Заказать
@@ -316,7 +320,7 @@
                 1 упаковка (30 г)
               </span>
               <span class="additional-products__item-value">
-                300р
+                300 &#x20bd;
               </span>
               <button class="additional-products__button button button--additional" type="button">
                 Заказать
@@ -324,16 +328,16 @@
             </li>
           </ul>
           <p class="additional-products__gift">
-            Закажите все
+            Закажите все<br>
             и получите чехол для
             кота в подарок!
           </p>
         </div>
       </section>
       <section class="cooperation cooperation--another-page">
-        <div class="cooperation__wrapper">
+        <div class="cooperation__wrapper cooperation__wrapper--catalog">
           <h2 class="cooperation__title">
-            приглашаем к сотрудничеству дилеров!
+            приглашаем<br> к сотрудничеству дилеров!
           </h2>
           <address class="cooperation__address">ул. Большая
             Конюшенная, д. 19/8
@@ -347,7 +351,7 @@
     <footer class="footer">
       <section class="footer__section">
         <a class="footer__logo" href="#" aria-label="логотип">
-          <svg width="101" height="18" viewBox="0 0 101 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="128" height="24" viewBox="0 0 101 18" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_135_3354)">
             <path d="M1.26449 16.5385C0.36955 15.2762 -0.0747041 13.7627 1.02073e-05 12.2308V5.84615C-0.108365 4.29774 0.308071 2.75746 1.18546 1.46154C2.05478 0.461538 3.39829 0 5.37403 0C7.34978 0 8.61425 0.461538 9.40455 1.30769C10.2626 2.37941 10.6846 3.72136 10.59 5.07692V6.61539H6.71754V4.84615C6.74881 4.32289 6.66808 3.799 6.48045 3.30769C6.38016 3.10938 6.2212 2.9448 6.02403 2.83513C5.82686 2.72547 5.60049 2.67572 5.37403 2.69231C4.82082 2.69231 4.42568 2.84615 4.26762 3.23077C4.08883 3.77733 4.00862 4.34988 4.03053 4.92308V13.1538C3.98879 13.71 4.0978 14.267 4.34665 14.7692C4.5047 15.1538 4.89985 15.3077 5.45306 15.3077C6.00627 15.3077 6.32239 15.1538 6.48045 14.7692C6.66013 14.2494 6.74049 13.7019 6.71754 13.1538V11.3077H10.59V12.8462C10.6704 14.2238 10.2508 15.5852 9.40455 16.6923C8.61425 17.6154 7.27075 18.0769 5.37403 18.0769C3.47732 18 2.05478 17.5385 1.26449 16.5385Z" fill="#111111"/>
             <path d="M15.2527 0.23077H19.7574L23.0767 17.7692H19.4413L18.8091 14.0769H16.2011L15.5689 17.7692H11.8545L15.2527 0.23077ZM18.493 11.7692L17.5446 4.92308L16.5963 11.7692H18.493Z" fill="#111111"/>

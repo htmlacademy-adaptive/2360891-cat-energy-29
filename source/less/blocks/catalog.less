@@ -1,56 +1,76 @@
 .catalog {
   border-top: 1px solid #d9d9d9;
+
+  @media (min-width: @tablet-width) {
+    border-top: none;
+  }
 }
 
 .catalog__wrapper {
   margin: 0 auto;
   padding-top: 27px;
   border-bottom: 1px solid #ebebeb;
+
+  @media (min-width: @tablet-width) {
+    width: @width-tablet;
+    padding-top: 62px;
+    border-bottom: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @width-desktop;
+    max-width: 1220px;
+    margin-bottom: 76px;
+  }
 }
 
 .catalog__title {
   margin: 0 auto;
-  margin-bottom: 41px;
+  margin-bottom: 39px;
   width: @width-mobile;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    margin-bottom: 79px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @width-desktop;
+    margin-bottom: 90px;
+  }
 }
 
 .catalog__products-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
 
-.catalog__products-item {
-  padding-top: 20px;
-  padding-bottom: 25px;
-  border-top: 1px solid #d9d9d9;
-}
-
-@media (min-width: @tablet-width) {
-  .catalog {
-    border-top: none;
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
     margin-bottom: 70px;
   }
 
-  .catalog__wrapper {
-    width: @width-tablet;
-    padding-top: 65px;
-    border-bottom: none;
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 80px;
+    row-gap: 70px;
   }
+}
 
-  .catalog__products-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-  }
+.catalog__products-item {
+  padding-top: 15px;
+  padding-bottom: 24px;
+  border-top: 1px solid #d9d9d9;
 
-  .catalog__products-item {
+  @media (min-width: @tablet-width) {
     padding-top: 0;
     padding-bottom: 40px;
     padding-left: 37px;
     padding-right: 37px;
     border: none;
-    background-image: linear-gradient(#ffffff 12%, #f2f2f2 12%, #f2f2f2);
+    background-image: linear-gradient(#ffffff 85px, #f2f2f2 85px, #f2f2f2);
 
     &:last-child {
       background-image: none;
@@ -58,23 +78,9 @@
     }
   }
 
-  .catalog__title {
-    margin: 0;
-    margin-bottom: 84px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .catalog__wrapper {
-    width: @width-desktop;
-  }
-
-  .catalog__products-list {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 60px;
-  }
-
-  .catalog__title {
-    width: @width-desktop;
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    padding-bottom: 40px;
+    background-image: linear-gradient(#ffffff 74px, #f2f2f2 74px, #f2f2f2);
   }
 }

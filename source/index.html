@@ -16,9 +16,9 @@
         <div class="main-header__wrapper-logo">
           <a href="#" class="main-header__logo-image" aria-label="логотип">
             <picture>
-              <source media="(min-width: 1440px)" srcset="./img/logo/logo-picture-desktop.svg">
-              <source media="(min-width: 768px)" srcset="./img/logo/logo-picture-tablet.svg">
-              <img src="./img/logo/logo-mobile.svg" height="38" width="33" alt="логотип">
+              <source class="main-header__logo-image-icon" media="(min-width: 1440px)" srcset="./img/logo/logo-picture-desktop.svg" height="59" width="70">
+              <source class="main-header__logo-image-icon" media="(min-width: 768px)" srcset="./img/logo/logo-picture-tablet.svg" height="60" width="60">
+              <img class="main-header__logo-image-icon" src="./img/logo/logo-mobile.svg" height="38" width="33" alt="логотип">
             </picture>
             <svg class="main-header__logo-text" width="101" height="18" aria-label="логотип текстом">
               <use xlink:href="./img/sprite.svg#logo-text"></use>
@@ -157,7 +157,7 @@
       </section>
       <section class="history">
         <div class="history__wrapper">
-          <h2 class="title-history title title--secondary">
+          <h2 class="history__title title title--secondary">
             Живой пример
           </h2>
           <p class="history__intro">
@@ -189,29 +189,39 @@
               </dd>
             </div>
           </dl>
-        </div>
-        <div class="history__slider">
-          <picture>
-            <source media="(min-width: 768px)" srcset="./img/slider/tablet-before.png 1x, ./img/slider/tablet-before@2x.png 2x">
-            <img class="history__slider-image" src="./img/slider/mobile-before.png" srcset="./img/slider/mobile-before@2x.png 2x" width="280" height="256" alt="толстый кот">
-          </picture>
-          <picture>
-            <source media="(min-width: 768px)" srcset="./img/slider/tablet-after.png 1x, ./img/slider/tablet-after@2x.png 2x">
-            <img class="history__slider-image" src="./img/slider/mobile-after.png" srcset="./img/slider/mobile-after@2x.png 2x" width="280" height="256" alt="худой кот">
-          </picture>
+          <div class="history__slider">
+            <div class="history__wrapper-slider">
+              <div class="history__slider-before">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./img/slider/tablet-before.png 1x, ./img/slider/tablet-before@2x.png 2x">
+                  <img class="history__slider-image" src="./img/slider/mobile-before.png" srcset="./img/slider/mobile-before@2x.png 2x" width="280" height="256" alt="толстый кот">
+                </picture>
+              </div>
+              <div class="history__slider-after">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./img/slider/tablet-after.png 1x, ./img/slider/tablet-after@2x.png 2x">
+                  <img class="history__slider-image" src="./img/slider/mobile-after.png" srcset="./img/slider/mobile-after@2x.png 2x" width="280" height="256" alt="худой кот">
+                </picture>
+              </div>
+              <div class="history__slider-divider">
+                <button class="history__slider-divider-button" type="button">
+                  <span class="visually-hidden">сдвинуть слайдер</span>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <section class="cooperation">
         <div class="cooperation__wrapper">
           <h2 class="cooperation__title">
-            приглашаем к сотрудничеству дилеров!
+            приглашаем<br> к сотрудничеству дилеров!
           </h2>
           <address class="cooperation__address">ул. Большая
             Конюшенная, д. 19/8
             <span class="cooperation__address-town">Санкт-Петербург</span>
           </address>
         </div>
-        <!-- <img src="./img/map.png" width="320" height="362" alt="расположение офиса на карте"> -->
         <iframe class="cooperation__maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8022.171586282425!2d30.31268188469363!3d59.938709457885835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1691488666479!5m2!1sru!2sru" width="320" height="362" style="border: 0;"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </section>
     </main>

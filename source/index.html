@@ -8,7 +8,7 @@
     <link rel="apple-touch-icon" href="./img/favicon/favicon-180.png">
     <link rel="manifest" href="manifest.webmanifest">
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.min.css">
   </head>
   <body class="page__body">
     <header class="main-header">
@@ -20,9 +20,9 @@
               <source class="main-header__logo-image-icon" media="(min-width: 768px)" srcset="./img/logo/logo-picture-tablet.svg" height="60" width="60">
               <img class="main-header__logo-image-icon" src="./img/logo/logo-mobile.svg" height="38" width="33" alt="логотип">
             </picture>
-            <svg class="main-header__logo-text" width="101" height="18" aria-label="логотип текстом">
-              <use xlink:href="./img/sprite.svg#logo-text"></use>
-            </svg>
+            <picture>
+              <img class="main-header__logo-text" src="./img/logo/logo-text.svg"  width="101" height="18" alt="логотип текстом">
+            </picture>
           </a>
           <button class="main-header__toggle main-header__toggle--open" type="button">
             <span class="visually-hidden">
@@ -149,7 +149,7 @@
               <span class="advantage-icon advantage-icon--time"></span>
               <p class="advantage__description">
                 Уже через месяц наслаждайтесь
-                изменениями к лучшему вашего питомца!
+                изменениями к лучшему<br> вашего питомца!
               </p>
             </li>
           </ul>
@@ -227,18 +227,18 @@
     </main>
     <footer class="footer">
       <section class="footer__section">
-        <a class="footer__logo" href="#" aria-label="heading">
-          <svg class="footer__logo-text" width="128" height="24">
+        <a class="footer__logo" href="#" aria-label="логотип Кэт энерджи текстом">
+          <!-- <svg class="footer__logo-text" width="128" height="24">
             <title id="heading">логотип Кэт энерджи текстом</title>
             <use xlink:href="./img/sprite.svg#logo-text"></use>
-          </svg>
+          </svg> -->
         </a>
         <ul class="footel__social-list">
           <li class="footel__social-item">
             <a class="footel__social-link" href="#" aria-label="heading">
               <svg width="28" height="22">
                 <title id="heading">ссылка во вконтакте</title>
-                <use xlink:href="./img/sprite.svg#vk"></use>
+                <use xlink:href="./img/icons/stack.svg#vk"></use>
               </svg>
             </a>
           </li>
@@ -246,7 +246,7 @@
             <a class="footel__social-link" href="#" aria-label="heading">
               <svg width="28" height="22">
                 <title id="heading">ссылка на youtube</title>
-                <use xlink:href="./img/sprite.svg#youtube"></use>
+                <use xlink:href="./img/icons/stack.svg#youtube"></use>
               </svg>
             </a>
           </li>
@@ -254,7 +254,7 @@
             <a class="footel__social-link" href="#" aria-label="heading">
               <svg width="28" height="22">
                 <title id="heading">ссылка в телеграмм</title>
-                <use xlink:href="./img/sprite.svg#telegram"></use>
+                <use xlink:href="./img/icons/stack.svg#telegram"></use>
               </svg>
             </a>
           </li>
@@ -262,10 +262,10 @@
         <div class="footer__logo-academy-wrapper">
           <a class="footer__logo-academy" href="#" aria-label="лого академии тестом">
             <svg width="113" height="20">
-              <use xlink:href="./img/sprite.svg#logo-academy-text"></use>
+              <use xlink:href="./img/icons/stack.svg#html-academy-logo-text"></use>
             </svg>
             <svg width="27" height="34">
-              <use xlink:href="./img/sprite.svg#logo-academy-icon"></use>
+              <use xlink:href="./img/icons/stack.svg#html-academy-logo"></use>
             </svg>
           </a>
         </div>

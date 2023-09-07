@@ -9,6 +9,9 @@
     <link rel="manifest" href="manifest.webmanifest">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="preload" href="./fonts/lato/lato-regular.woff2" as="font">
+    <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" as="font">
+    <link rel="preload" href="./fonts/oswald/oswaldmedium.woff2" as="font">
   </head>
   <body class="page__body">
     <header class="main-header">
@@ -62,11 +65,11 @@
           </p>
           <div class="hero__main-wrapper-image">
             <picture>
-              <source type="image/webp" media="(min-width: 1440px)" srcset="./img/hero/hero-desktop.webp 1x, ./img/hero/hero-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="./img/hero/hero-tablet.webp 1x, ./img/hero/hero-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="./img/hero/hero-mobile.webp 1x, ./img/hero/hero-mobile@2x.webp 2x">
-              <source media="(min-width: 1440px)" srcset="./img/hero/hero-desktop.png 1x, ./img/hero/hero-desktop@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="./img/hero/hero-tablet.jpg 1x, ./img/hero/hero-tablet@2x.jpg 2x">
+              <source type="image/webp" media="(min-width: 1440px)" srcset="./img/hero/hero-desktop.webp 1x, ./img/hero/hero-desktop@2x.webp 2x" width="552" height="499">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/hero/hero-tablet.webp 1x, ./img/hero/hero-tablet@2x.webp 2x" width="709" height="609">
+              <source type="image/webp" srcset="./img/hero/hero-mobile.webp 1x, ./img/hero/hero-mobile@2x.webp 2x" width="280" height="270">
+              <source media="(min-width: 1440px)" srcset="./img/hero/hero-desktop.png 1x, ./img/hero/hero-desktop@2x.png 2x" width="552" height="499">
+              <source media="(min-width: 768px)" srcset="./img/hero/hero-tablet.jpg 1x, ./img/hero/hero-tablet@2x.jpg 2x" width="709" height="609">
               <img class="hero__main-image" src="./img/hero/hero-mobile.png" srcset="./img/hero/hero-mobile@2x.png 2x"  width="280" height="270" alt="банка еды со вкусом курицы">
             </picture>
           </div>
@@ -88,7 +91,7 @@
                 <p class="program__description">
                   Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
                 </p>
-                <a class="program__button-all-catalog" type="button">
+                <a class="program__button-all-catalog" href="#">
                   каталог slim
                 </a>
               </div>
@@ -104,7 +107,7 @@
                 <p class="program__description">
                   Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
                 </p>
-                <a class="program__button-all-catalog" type="button" >
+                <a class="program__button-all-catalog" href="#">
                   каталог pro
                 </a>
               </div>
@@ -138,7 +141,6 @@
             </li>
             <li class="advantages__item advantage">
               <span class="advantage-icon advantage-icon--eat"></span>
-              </span>
               <p class="advantage__description">
                 Замените один-два приема
                 обычной еды на наше
@@ -193,12 +195,16 @@
             <div class="history__wrapper-slider">
               <div class="history__slider-before">
                 <picture>
-                  <source media="(min-width: 768px)" srcset="./img/slider/tablet-before.png 1x, ./img/slider/tablet-before@2x.png 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="./img/slider/tablet-before.webp 1x, ./img/slider/tablet-before@2x.webp 2x" width="512" height="560">
+                  <source type="image/webp" srcset="./img/slider/mobile-before.webp 1x, ./img/slider/mobile-before@2x.webp 2x" width="280" height="270">
+                  <source media="(min-width: 768px)" srcset="./img/slider/tablet-before.png 1x, ./img/slider/tablet-before@2x.png 2x" width="512" height="560">
                   <img class="history__slider-image" src="./img/slider/mobile-before.png" srcset="./img/slider/mobile-before@2x.png 2x" width="280" height="256" alt="толстый кот">
                 </picture>
               </div>
               <div class="history__slider-after">
                 <picture>
+                  <source type="image/webp" media="(min-width: 768px)" srcset="./img/slider/tablet-after.webp 1x, ./img/slider/tablet-after@2x.webp 2x" width="512" height="560">
+                  <source type="image/webp" srcset="./img/slider/mobile-after.webp 1x, ./img/slider/mobile-after@2x.webp 2x" width="280" height="270">
                   <source media="(min-width: 768px)" srcset="./img/slider/tablet-after.png 1x, ./img/slider/tablet-after@2x.png 2x">
                   <img class="history__slider-image" src="./img/slider/mobile-after.png" srcset="./img/slider/mobile-after@2x.png 2x" width="280" height="256" alt="худой кот">
                 </picture>
@@ -227,19 +233,20 @@
     </main>
     <footer class="footer">
       <section class="footer__section">
+        <h2 class="visually-hidden">контакты</h2>
         <a class="footer__logo" href="#" aria-label="логотип Кэт энерджи текстом">
         </a>
-        <ul class="footel__social-list">
-          <li class="footel__social-item">
-            <a class="footel__social-link footel__social-link--vk" href="#" aria-label="ссылка во вконтакте">
+        <ul class="footer__social-list">
+          <li class="footer__social-item">
+            <a class="footer__social-link footer__social-link--vk" href="#" aria-label="ссылка во вконтакте">
             </a>
           </li>
-          <li class="footel__social-item">
-            <a class="footel__social-link footel__social-link--youtube" href="#" aria-label="ссылка на youtube">
+          <li class="footer__social-item">
+            <a class="footer__social-link footer__social-link--youtube" href="#" aria-label="ссылка на youtube">
             </a>
           </li>
-          <li class="footel__social-item">
-            <a class="footel__social-link footel__social-link--telegram" href="#" aria-label="ссылка в телеграмм">
+          <li class="footer__social-item">
+            <a class="footer__social-link footer__social-link--telegram" href="#" aria-label="ссылка в телеграмм">
             </a>
           </li>
         </ul>

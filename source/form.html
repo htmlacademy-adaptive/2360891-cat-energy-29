@@ -9,6 +9,9 @@
     <link rel="manifest" href="manifest.webmanifest">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="preload" href="./fonts/lato/lato-regular.woff2" as="font">
+    <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" as="font">
+    <link rel="preload" href="./fonts/oswald/oswaldmedium.woff2" as="font">
   </head>
   <body class="page__body">
     <header class="main-header main-header--form">
@@ -94,7 +97,7 @@
               <ul class="selection-program__program-list">
                 <li class="selection-program__program-item">
                   <label class="selection-program__program-title" for="thin">
-                    <input class="selection-program__radio-input visually-hidden" class="" type="radio" id="thin" name="program" checked value="thin">
+                    <input class="selection-program__radio-input visually-hidden" type="radio" id="thin" name="program" checked value="thin">
                     <span class="selection-program__radio-mark"></span>
                     Похудение
                   </label>
@@ -121,7 +124,7 @@
               </legend>
               <ul class="selection-program__owner-data-list">
                 <li class="selection-program__owner-data-item field-input">
-                  <label class="field-input__title " for="email">
+                  <label class="field-input__title" for="email">
                     E-mail:*
                   </label>
                   <input class="field-input__value field-input__value--email" type="email" name="email" id="email" value="kuklachev@gmail.com" >
@@ -201,19 +204,19 @@
     </main>
     <footer class="footer">
       <section class="footer__section">
-        <a class="footer__logo" href="#" aria-label="логотип Кэт энерджи текстом">
-        </a>
-        <ul class="footel__social-list">
-          <li class="footel__social-item">
-            <a class="footel__social-link footel__social-link--vk" href="#" aria-label="ссылка во вконтакте">
+        <h2 class="visually-hidden">контакты</h2>
+        <a class="footer__logo" href="#" aria-label="логотип Кэт энерджи текстом"></a>
+        <ul class="footer__social-list">
+          <li class="footer__social-item">
+            <a class="footer__social-link footer__social-link--vk" href="#" aria-label="ссылка во вконтакте">
             </a>
           </li>
-          <li class="footel__social-item">
-            <a class="footel__social-link footel__social-link--youtube" href="#" aria-label="ссылка на youtube">
+          <li class="footer__social-item">
+            <a class="footer__social-link footer__social-link--youtube" href="#" aria-label="ссылка на youtube">
             </a>
           </li>
-          <li class="footel__social-item">
-            <a class="footel__social-link footel__social-link--telegram" href="#" aria-label="ссылка в телеграмм">
+          <li class="footer__social-item">
+            <a class="footer__social-link footer__social-link--telegram" href="#" aria-label="ссылка в телеграмм">
             </a>
           </li>
         </ul>
@@ -223,8 +226,8 @@
             <span class="footer__logo-academy-logo"></span>
           </a>
         </div>
-        </div>
       </section>
+    </footer>
     <script src="./js/scripts.js"></script>
   </body>
 </html>

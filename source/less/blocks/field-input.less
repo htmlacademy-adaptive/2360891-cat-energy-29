@@ -37,12 +37,18 @@
   }
 
   &--email {
-    padding-right: 30px;
-    background-image: url("../../img/icons/stack.svg#email-icon");
-    background-size: 20px 20px;
-    background-repeat: no-repeat;
-    background-position-x: 95%;
-    background-position-y: center;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 0;
+      left: 0;
+      content: "";
+      mask: url("../../img/icons/stack.svg#email-icon");
+      background-color: #222222;
+    }
   }
 
   &--phone {

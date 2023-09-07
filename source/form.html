@@ -20,9 +20,9 @@
               <source class="main-header__logo-image-icon" media="(min-width: 768px)" srcset="./img/logo/logo-picture-tablet.svg" height="60" width="60">
               <img class="main-header__logo-image-icon" src="./img/logo/logo-mobile.svg" height="38" width="33" alt="логотип">
             </picture>
-            <svg class="main-header__logo-text" width="101" height="18" aria-label="логотип текстом">
-              <use xlink:href="./img/sprite.svg#logo-text"></use>
-            </svg>
+            <picture>
+              <img class="main-header__logo-text" src="./img/icons/logo-text.svg"  width="101" height="18" alt="логотип текстом">
+            </picture>
           </a>
           <button class="main-header__toggle main-header__toggle--open" type="button">
             <span class="visually-hidden">
@@ -196,53 +196,33 @@
             <span class="cooperation__address-town">Санкт-Петербург</span>
           </address>
         </div>
-        <!-- <img src="./img/map.png" width="320" height="362" alt="расположение офиса на карте"> -->
         <iframe class="cooperation__maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8022.171586282425!2d30.31268188469363!3d59.938709457885835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1691488666479!5m2!1sru!2sru" width="320" height="362" style="border: 0;"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </section>
     </main>
     <footer class="footer">
       <section class="footer__section">
-        <a class="footer__logo" href="#" aria-label="heading">
-          <svg class="footer__logo-text" width="128" height="24">
-            <title id="heading">логотип Кэт энерджи текстом</title>
-            <use xlink:href="./img/sprite.svg#logo-text"></use>
-          </svg>
+        <a class="footer__logo" href="#" aria-label="логотип Кэт энерджи текстом">
         </a>
         <ul class="footel__social-list">
           <li class="footel__social-item">
-            <a class="footel__social-link" href="#" aria-label="heading">
-              <svg width="28" height="22">
-                <title id="heading">ссылка во вконтакте</title>
-                <use xlink:href="./img/sprite.svg#vk"></use>
-              </svg>
+            <a class="footel__social-link footel__social-link--vk" href="#" aria-label="ссылка во вконтакте">
             </a>
           </li>
           <li class="footel__social-item">
-            <a class="footel__social-link" href="#" aria-label="heading">
-              <svg width="28" height="22">
-                <title id="heading">ссылка на youtube</title>
-                <use xlink:href="./img/sprite.svg#youtube"></use>
-              </svg>
+            <a class="footel__social-link footel__social-link--youtube" href="#" aria-label="ссылка на youtube">
             </a>
           </li>
           <li class="footel__social-item">
-            <a class="footel__social-link" href="#" aria-label="heading">
-              <svg width="28" height="22">
-                <title id="heading">ссылка в телеграмм</title>
-                <use xlink:href="./img/sprite.svg#telegram"></use>
-              </svg>
+            <a class="footel__social-link footel__social-link--telegram" href="#" aria-label="ссылка в телеграмм">
             </a>
           </li>
         </ul>
         <div class="footer__logo-academy-wrapper">
           <a class="footer__logo-academy" href="#" aria-label="лого академии тестом">
-            <svg width="113" height="20">
-              <use xlink:href="./img/sprite.svg#logo-academy-text"></use>
-            </svg>
-            <svg width="27" height="34">
-              <use xlink:href="./img/sprite.svg#logo-academy-icon"></use>
-            </svg>
+            <span class="footer__logo-academy-text"></span>
+            <span class="footer__logo-academy-logo"></span>
           </a>
+        </div>
         </div>
       </section>
     <script src="./js/scripts.js"></script>

@@ -358,16 +358,27 @@
   left: -17px;
   width: 40px;
   height: 40px;
-  mask-image: url("../../img/icons/stack.svg#slider-button");
-  background-color: #ffffff;
   border: none;
+  border-radius: 50%;
   cursor: pointer;
 
-  // &:hover {
-  //
-  // }
+  &::after {
+    position: absolute;
+    content: "";
+    top: calc(50% - 20px);
+    left: 0;
+    width: 40px;
+    height: 40px;
+    mask-image: url("../../img/icons/stack.svg#slider-button");
+    background-color: #666666;
+  }
 
-  // &:active {
+  &:hover::after {
+    background-color: #68b738;
+  }
 
-  // }
+  &:active::after {
+    background-color: #5eaa2f;
+    opacity: 0.6;
+  }
 }

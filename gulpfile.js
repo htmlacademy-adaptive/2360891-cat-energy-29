@@ -69,7 +69,7 @@ const createWebp = () => {
 //SVG
 
 const svg = () => {
-  return gulp.src('source/img/**/*.svg')
+  return gulp.src(['source/img/**/*.svg', '!source/img/logo/*.svg'])
   .pipe(svgo())
   .pipe(gulp.dest('build/img'));
 }
@@ -86,6 +86,7 @@ const svg = () => {
 
 const createStack = () => {
   return gulp.src('source/img/icons/*.svg')
+  .pipe(svgo())
   .pipe(stacksvg({output: `stack` }))
   .pipe(gulp.dest('build/img/icons'));
 }
@@ -94,6 +95,7 @@ const createStack = () => {
 
 const copy = (done) => {
   gulp.src([
+    'source/img/logo/*.svg',
     'source/fonts/**/*.{woff2,woff}',
     'source/*.ico',
     'source/*.webmanifest'
@@ -135,7 +137,7 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
-  gulp.watch('source/js/script.js', gulp.series(scripts));
+  gulp.watch('source/js/scripts.js', gulp.series(scripts));
   gulp.watch('source/*.html', gulp.series(html, reload));
 }
 

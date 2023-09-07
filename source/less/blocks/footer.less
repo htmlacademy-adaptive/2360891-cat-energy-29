@@ -60,22 +60,31 @@
 }
 
 .footel__social-link {
-  :hover {
-    fill: #68b738;
+  display: block;
+  width: 28px;
+  height: 22px;
+  background-color: #666666;
+
+  &:hover {
+    background-color: #68b738;
   }
 
-  :active {
+  &:active {
     fill: #68b738;
     opacity: 0.5;
   }
 }
 
 .footel__social-link--vk {
-  display: block;
-  width: 28px;
-  height: 22px;
   mask-image: url("../../img/icons/stack.svg#vk");
-  background-color: #666666;
+}
+
+.footel__social-link--youtube {
+  mask-image: url("../../img/icons/stack.svg#youtube");
+}
+
+.footel__social-link--telegram {
+  mask-image: url("../../img/icons/stack.svg#telegram");
 }
 
 .footer__logo-academy-wrapper {
@@ -89,17 +98,31 @@
   align-items: center;
   justify-content: space-between;
 
-  &:hover {
-    --svg-logo-color: #68b738;
-  }
-
-  &:active {
-    --svg-logo-color: #68b738;
-    opacity: 0.3;
-  }
-
   @media (min-width: @tablet-width) {
     width: fit-content;
     gap: 23px;
+  }
+}
+
+.footer__logo-academy-text {
+  width: 113px;
+  height: 20px;
+  mask-image: url("../../img/icons/stack.svg#html-academy-logo-text");
+  background-color: rgba(68, 68, 68, 1);
+}
+
+.footer__logo-academy-logo {
+  width: 27px;
+  height: 34px;
+  mask-image: url("../../img/icons/stack.svg#html-academy-logo");
+  background-color: rgba(68, 68, 68, 1);
+
+  &:hover {
+    background-color: #68b738;
+  }
+
+  &:active {
+    background-color: #68b738;
+    opacity: 0.3;
   }
 }

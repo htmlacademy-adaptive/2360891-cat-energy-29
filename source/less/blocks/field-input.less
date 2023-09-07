@@ -31,17 +31,24 @@
   text-transform: uppercase;
   border: 1px solid #e7e7e7;
 
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
+
   &--email {
     padding-right: 30px;
-    background-image: url("../../img/email-icon.svg");
+    background-image: url("../../img/icons/stack.svg#email-icon");
+    background-size: 20px 20px;
     background-repeat: no-repeat;
-    background-position-y: center;
     background-position-x: 95%;
+    background-position-y: center;
   }
 
   &--phone {
     padding-right: 30px;
-    background-image: url("../../img/phone-icon.svg");
+    background-image: url("../../img/icons/stack.svg#phone-icon");
+    background-size: 20px 20px;
     background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: 95%;

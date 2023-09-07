@@ -14,3 +14,12 @@ navToggle.addEventListener('click', function () {
     navToggle.classList.remove ('main-header__toggle--open');
   }
 });
+
+console.log('ghbdtn')
+
+window.addEventListener('resize', () => {
+  const width = window.innerWidth;
+  if (width >= 768) {
+    navMain.classList.remove('main-nav--closed');
+  }
+})

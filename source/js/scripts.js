@@ -15,8 +15,6 @@ navToggle.addEventListener('click', function () {
   }
 });
 
-console.log('ghbdtn')
-
 window.addEventListener('resize', () => {
   const width = window.innerWidth;
   if (width >= 768) {

@@ -9,9 +9,9 @@
     <link rel="manifest" href="manifest.webmanifest">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="./css/style.min.css">
-    <link rel="preload" href="./fonts/lato/lato-regular.woff2" as="font">
-    <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" as="font">
-    <link rel="preload" href="./fonts/oswald/oswaldmedium.woff2" as="font">
+    <link rel="preload" href="./fonts/lato/lato-regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/oswald/oswaldmedium.woff2" as="font" crossorigin="anonymous">
   </head>
   <body class="page__body">
     <header class="main-header main-header--catalog">
@@ -24,7 +24,7 @@
               <img class="main-header__logo-image-icon" src="./img/logo/logo-mobile.svg" height="38" width="33" alt="логотип">
             </picture>
             <picture>
-              <img class="main-header__logo-text" src="./img/icons/logo-text.svg"  width="101" height="18" alt="логотип текстом">
+              <img class="main-header__logo-text" src="./img/logo/logo-text.svg"  width="101" height="18" alt="логотип текстом">
             </picture>
           </a>
           <button class="main-header__toggle main-header__toggle--open" type="button">
@@ -367,24 +367,28 @@
     <footer class="footer">
       <section class="footer__section">
         <h2 class="visually-hidden">контакты</h2>
-        <a class="footer__logo" href="#" aria-label="логотип Кэт энерджи текстом">
+        <a class="footer__logo" href="index.html" aria-label="логотип Кэт энерджи текстом">
+          <span class="footer__logo-icon"></span>
         </a>
         <ul class="footer__social-list">
           <li class="footer__social-item">
-            <a class="footer__social-link footer__social-link--vk" href="#" aria-label="ссылка во вконтакте">
+            <a class="footer__social-link" href="https://vk.com/htmlacademy" aria-label="ссылка во вконтакте">
+              <span class="footer__social-link-icon footer__social-link-icon--vk"></span>
             </a>
           </li>
           <li class="footer__social-item">
-            <a class="footer__social-link footer__social-link--youtube" href="#" aria-label="ссылка на youtube">
+            <a class="footer__social-link" href="https://www.youtube.com/user/htmlacademyru" aria-label="ссылка на youtube">
+              <span class="footer__social-link-icon footer__social-link-icon--youtube"></span>
             </a>
           </li>
           <li class="footer__social-item">
-            <a class="footer__social-link footer__social-link--telegram" href="#" aria-label="ссылка в телеграмм">
+            <a class="footer__social-link" href="https://t.me/htmlacademy" aria-label="ссылка в телеграмм">
+              <span class="footer__social-link-icon footer__social-link-icon--telegram"></span>
             </a>
           </li>
         </ul>
         <div class="footer__logo-academy-wrapper">
-          <a class="footer__logo-academy" href="#" aria-label="лого академии тестом">
+          <a class="footer__logo-academy" href="https://htmlacademy.ru/" aria-label="лого академии тестом">
             <span class="footer__logo-academy-text"></span>
             <span class="footer__logo-academy-logo"></span>
           </a>

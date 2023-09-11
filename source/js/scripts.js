@@ -21,5 +21,16 @@ window.addEventListener('resize', () => {
   const width = window.innerWidth;
   if (width >= 768) {
     navMain.classList.remove('main-nav--closed');
+    navToggle.classList.add ('main-header__toggle--close');
+    navMain.classList.remove('main-nav--opened');
+  }
+
+  if (width < 768) {
+    navMain.classList.add('main-nav--closed');
+    if (navToggle.classList.contains('main-header__toggle--open')){
+      navToggle.classList.remove ('main-header__toggle--open');
+      navToggle.classList.add ('main-header__toggle--close');
+    }
+
   }
 })

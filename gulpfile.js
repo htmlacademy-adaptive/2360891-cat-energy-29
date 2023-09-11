@@ -69,20 +69,10 @@ const createWebp = () => {
 //SVG
 
 const svg = () => {
-  return gulp.src(['source/img/**/*.svg', '!source/img/logo/*.svg'])
+  return gulp.src(['source/img/**/*.svg','!source/img/icons/*.svg'])
   .pipe(svgo())
   .pipe(gulp.dest('build/img'));
 }
-
-// const sprite = () => {
-//   return gulp.src('source/img/icons/*.svg')
-//   .pipe(svgo())
-//   .pipe(svgstore({
-//     inlineSvg:true
-//   }))
-//   .pipe(rename('sprite.svg'))
-//   .pipe(gulp.dest('build/img'));
-// }
 
 const createStack = () => {
   return gulp.src('source/img/icons/*.svg')
@@ -137,7 +127,7 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
-  gulp.watch('source/js/scripts.js', gulp.series(scripts));
+  gulp.watch('source/js/*.js', gulp.series(scripts));
   gulp.watch('source/*.html', gulp.series(html, reload));
 }
 

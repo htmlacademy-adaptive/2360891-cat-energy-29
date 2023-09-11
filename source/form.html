@@ -9,6 +9,11 @@
     <link rel="manifest" href="manifest.webmanifest">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="preload" href="./fonts/lato/lato-regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/oswald/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=20ba0cff-41fa-4a13-9d45-a2713058a963&lang=ru_RU" type="text/javascript"></script>
+    <script src="./js/map.js"></script>
   </head>
   <body class="page__body">
     <header class="main-header main-header--form">
@@ -21,7 +26,7 @@
               <img class="main-header__logo-image-icon" src="./img/logo/logo-mobile.svg" height="38" width="33" alt="логотип">
             </picture>
             <picture>
-              <img class="main-header__logo-text" src="./img/icons/logo-text.svg"  width="101" height="18" alt="логотип текстом">
+              <img class="main-header__logo-text" src="./img/logo/logo-text.svg"  width="101" height="18" alt="логотип текстом">
             </picture>
           </a>
           <button class="main-header__toggle main-header__toggle--open" type="button">
@@ -94,7 +99,7 @@
               <ul class="selection-program__program-list">
                 <li class="selection-program__program-item">
                   <label class="selection-program__program-title" for="thin">
-                    <input class="selection-program__radio-input visually-hidden" class="" type="radio" id="thin" name="program" checked value="thin">
+                    <input class="selection-program__radio-input visually-hidden" type="radio" id="thin" name="program" checked value="thin">
                     <span class="selection-program__radio-mark"></span>
                     Похудение
                   </label>
@@ -121,16 +126,18 @@
               </legend>
               <ul class="selection-program__owner-data-list">
                 <li class="selection-program__owner-data-item field-input">
-                  <label class="field-input__title " for="email">
+                  <label class="field-input__title" for="email">
                     E-mail:*
                   </label>
-                  <input class="field-input__value field-input__value--email" type="email" name="email" id="email" value="kuklachev@gmail.com" >
+                  <input class="field-input__value" type="email" name="email" id="email" value="kuklachev@gmail.com">
+                  <span class="field-input-icon field-input-icon--email"></span>
                 </li>
                 <li class="selection-program__owner-data-item field-input">
                   <label class="field-input__title" for="phone">
                     Телефон:*
                   </label>
-                  <input class="field-input__value field-input__value--phone" type="text" name="phone" id="phone" value="8 (960) 900-60-90" >
+                  <input class="field-input__value" type="text" name="phone" id="phone" value="8 (960) 900-60-90" >
+                  <span class="field-input-icon field-input-icon--phone"></span>
                 </li>
               </ul>
             </fieldset>
@@ -196,35 +203,40 @@
             <span class="cooperation__address-town">Санкт-Петербург</span>
           </address>
         </div>
-        <iframe class="cooperation__maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8022.171586282425!2d30.31268188469363!3d59.938709457885835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1691488666479!5m2!1sru!2sru" width="320" height="362" style="border: 0;"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="cooperation__maps" id="map"></div>
       </section>
     </main>
     <footer class="footer">
       <section class="footer__section">
-        <a class="footer__logo" href="#" aria-label="логотип Кэт энерджи текстом">
+        <h2 class="visually-hidden">контакты</h2>
+        <a class="footer__logo" href="index.html" aria-label="логотип Кэт энерджи текстом">
+          <span class="footer__logo-icon"></span>
         </a>
-        <ul class="footel__social-list">
-          <li class="footel__social-item">
-            <a class="footel__social-link footel__social-link--vk" href="#" aria-label="ссылка во вконтакте">
+        <ul class="footer__social-list">
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="https://vk.com/htmlacademy" aria-label="ссылка во вконтакте">
+              <span class="footer__social-link-icon footer__social-link-icon--vk"></span>
             </a>
           </li>
-          <li class="footel__social-item">
-            <a class="footel__social-link footel__social-link--youtube" href="#" aria-label="ссылка на youtube">
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="https://www.youtube.com/user/htmlacademyru" aria-label="ссылка на youtube">
+              <span class="footer__social-link-icon footer__social-link-icon--youtube"></span>
             </a>
           </li>
-          <li class="footel__social-item">
-            <a class="footel__social-link footel__social-link--telegram" href="#" aria-label="ссылка в телеграмм">
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="https://t.me/htmlacademy" aria-label="ссылка в телеграмм">
+              <span class="footer__social-link-icon footer__social-link-icon--telegram"></span>
             </a>
           </li>
         </ul>
         <div class="footer__logo-academy-wrapper">
-          <a class="footer__logo-academy" href="#" aria-label="лого академии тестом">
+          <a class="footer__logo-academy" href="https://htmlacademy.ru/" aria-label="лого академии тестом">
             <span class="footer__logo-academy-text"></span>
             <span class="footer__logo-academy-logo"></span>
           </a>
         </div>
-        </div>
       </section>
+    </footer>
     <script src="./js/scripts.js"></script>
   </body>
 </html>

@@ -1,4 +1,5 @@
 .field-input {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 13px;
@@ -36,35 +37,59 @@
     appearance: none;
   }
 
-  &--email {
-    padding-right: 30px;
-    background-image: url("../../img/icons/stack.svg#email-icon");
-    background-size: 20px 20px;
-    background-repeat: no-repeat;
-    background-position-x: 95%;
-    background-position-y: center;
+  &:focus-visible {
+    outline: 2px solid  #444444;
   }
 
-  &--phone {
-    padding-right: 30px;
-    background-image: url("../../img/icons/stack.svg#phone-icon");
-    background-size: 20px 20px;
-    background-repeat: no-repeat;
-    background-position-y: center;
-    background-position-x: 95%;
+  &:focus-visible + .field-input-icon--email {
+    background-color: #68b738;
+  }
+
+  &:focus-visible + .field-input-icon--phone {
+    background-color: #68b738;
+  }
+
+  &--error {
+    &:focus-visible {
+      outline: 2px solid  #ff8282;
+    }
+
+    &:focus-visible + .field-input-icon--email {
+      background-color: #ff8282;
+    }
+
+    &:focus-visible + .field-input-icon--phone {
+      background-color: #ff8282;
+    }
   }
 
   @media (min-width: @tablet-width) {
     padding: 10px 21px;
     font-size: 20px;
     line-height: normal;
+  }
+}
 
-    &--email {
-      background-position-x: 98%;
-    }
+.field-input-icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 15px;
+  content: "";
+  background-color: #222222;
 
-    &--phone {
-      background-position-x: 97.6%;
-    }
+  &--email {
+    left: 89%;
+    mask: url("../../img/icons/stack.svg#email-icon");
+    background-color: #222222;
+  }
+
+  &--phone {
+    left: 88%;
+    mask: url("../../img/icons/stack.svg#phone-icon");
+  }
+
+  &:focus-visible {
+    background-color: #68b738;
   }
 }

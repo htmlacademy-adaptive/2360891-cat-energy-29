@@ -31,11 +31,7 @@
   line-height: 18px;
   text-transform: uppercase;
   border: 1px solid #e7e7e7;
-
-  &::-webkit-outer-spin-button,
-  &::-webkit-inner-spin-button {
-    appearance: none;
-  }
+  appearance: none;
 
   &:focus-visible {
     outline: 2px solid  #444444;
@@ -49,18 +45,16 @@
     background-color: #68b738;
   }
 
-  &--error {
-    &:focus-visible {
-      outline: 2px solid  #ff8282;
-    }
+  &:invalid {
+    outline: 2px solid  #ff8282;
+  }
 
-    &:focus-visible + .field-input-icon--email {
-      background-color: #ff8282;
-    }
+  &:invalid + .field-input-icon--email {
+    background-color: #ff8282;
+  }
 
-    &:focus-visible + .field-input-icon--phone {
-      background-color: #ff8282;
-    }
+  &:invalid + .field-input-icon--phone {
+    background-color: #ff8282;
   }
 
   @media (min-width: @tablet-width) {
@@ -91,5 +85,25 @@
 
   &:focus-visible {
     background-color: #68b738;
+  }
+
+  @media (min-width: @tablet-width) {
+    &--email {
+      left: 95%;
+    }
+
+    &--phone {
+      left: 95%;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--email {
+      left: 94%;
+    }
+
+    &--phone {
+      left: 94%;
+    }
   }
 }

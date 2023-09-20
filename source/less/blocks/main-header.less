@@ -3,6 +3,10 @@
 
   @media (min-width: @desktop-width) {
     background-color: transparent;
+
+    &--index {
+      background-image: linear-gradient(to left, rgba(68, 151, 17, 0.85) 50%, #ffffff 50%, #ffffff);
+    }
   }
 }
 
@@ -64,6 +68,7 @@
 }
 
 .main-header__toggle {
+  display: none;
   padding: 4px 0;
   width: 24px;
   height: 22px;
@@ -71,8 +76,14 @@
   border: none;
   cursor: pointer;
 
+  &--js {
+    display: block;
+  }
+
   @media (min-width: @tablet-width) {
-    display: none;
+    &--js {
+      display: none;
+    }
   }
 }
 

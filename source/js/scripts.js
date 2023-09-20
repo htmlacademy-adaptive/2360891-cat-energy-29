@@ -1,6 +1,12 @@
 let navMain = document.querySelector('.main-nav');
 let navToggle = document.querySelector('.main-header__toggle');
 
+window.onload = (event) => {
+  let mainMenu = navMain.querySelector('.main-nav__menu-list');
+  navToggle.classList.add ('main-header__toggle--js')
+  mainMenu.classList.add('main-nav__menu-list--js');
+};
+
 navToggle.addEventListener('click', function () {
   if (navMain.classList.contains('main-nav--closed')) {
     navMain.classList.remove('main-nav--closed');

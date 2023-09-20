@@ -20,7 +20,8 @@
 
   @media (min-width: @desktop-width) {
     width: @width-desktop;
-    padding-top: 40px;
+    padding-top: 35px;
+    padding-bottom: 30px;
   }
 }
 
@@ -53,6 +54,7 @@
 .footer__social-list {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 24px;
   margin-bottom: 23px;
   padding: 21px 0;
@@ -61,7 +63,13 @@
   list-style-type: none;
 
   @media (min-width: @tablet-width) {
+    justify-self: center;
+    width: 180px;
     border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 25px;
   }
 }
 

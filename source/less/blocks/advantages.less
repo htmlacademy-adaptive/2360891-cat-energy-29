@@ -93,29 +93,26 @@
   color: #444444;
   line-height: 18px;
 
-  & br {
-    display: none;
-  }
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
     z-index: 2;
+  }
+}
 
-    & br {
-      display: block;
-    }
+.advantage__description br {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
   }
 
   @media (min-width: 900px) {
-    & br {
-      display: none;
-    }
+    display: none;
   }
 
   @media (min-width: @desktop-width) {
-    & br {
-      display: block;
-    }
+    display: block;
   }
 }

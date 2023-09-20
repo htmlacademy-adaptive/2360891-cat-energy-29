@@ -11,21 +11,30 @@
 }
 
 .main-nav__menu-list {
-  position: absolute;
   width: 100%;
   margin: 0;
   padding: 0;
   background-color: #ffffff;
   list-style-type: none;
 
+  &--js {
+    position: absolute;
+  }
+
   @media (min-width: @tablet-width) {
     position: static;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     column-gap: 37px;
+    row-gap: 15px;
+    width: 443px;
   }
 
   @media (min-width: @desktop-width) {
+    width: 495px;
+    padding-left: 17px;
+    column-gap: 33px;
     background-color: transparent;
   }
 }
@@ -48,7 +57,7 @@
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
-  font-family: "Oswald", sans-serif;
+  font-family: @font-secondary;
   color: #000000;
   text-decoration: none;
 
